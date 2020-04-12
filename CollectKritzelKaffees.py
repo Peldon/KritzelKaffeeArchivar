@@ -32,14 +32,39 @@ def convert_to_KritzelKaffeeTweet(tweets):
             result.append(KritzelKaffeeTweet(tweet['id'], tweet['created_at'], tweet['entities']['media'][0]['media_url'], tweet['text']))
     return result
 
+def save_csv(kritzelkaffees):
+    filename = "KritzelKaffees.csv" 
+    with open(filename, 'w', encoding="utf-8") as csvfile:
+        for k in kritzelkaffees:
+            csvfile.write(str(k.id) +",'"+ k.date +"',"+ repr(k.text) +",'"+ k.imglink + "'\n")
+    return filename
+
+def save_html(kritzelkaffees):
+    filename = "KritzelKaffees.html"
+    with open('html/'+filename, 'w', encoding="utf-8") as htmlfile:
+        from HtmlTemplate import htmlstart, htmlend
+        htmlfile.write(htmlstart)
+        for k in kritzelkaffees:
+            htmlfile.write("<tr>\n")
+            htmlfile.write("<td>"+k.date+"</td>\n")
+            htmlfile.write("<td>"+str(k.id)+"???</td>\n")
+            htmlfile.write("<td>"+k.text+"</td>\n")
+            htmlfile.write("<td><img src='"+k.imglink+"' width='200px'></td>\n")
+            htmlfile.write("</tr>\n")
+        htmlfile.write(htmlend)
+    return filename
+
 
 if __name__ == "__main__":
     from TwitterTokens import *
     t = Twitter(auth=OAuth(token, token_secret, consumer_key, consumer_secret))
-
+    print('Looking for KritzelKaffee tweets')
     tweets = get_tweets()
     kritzelkaffees = convert_to_KritzelKaffeeTweet(tweets)
-    print(len(kritzelkaffees))
-    for k in kritzelkaffees:
-        print(str(k.id) +",'"+ k.date +"',"+ repr(k.text) +",'"+ k.imglink + "'")
+    print('Found ' + str(len(kritzelkaffees)) + ' KritzelKaffee tweets!')
+    csvfilename = save_csv(kritzelkaffees)
+    print('Wrote data to ' + csvfilename)
+#    htmlfilename = save_html(kritzelkaffees)
+#    print('Wrote data to ' + htmlfilename)
+    print('Bye')
 
