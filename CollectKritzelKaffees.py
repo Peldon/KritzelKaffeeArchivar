@@ -37,10 +37,10 @@ def convert_to_KritzelKaffeeTweet(tweets):
 def save_csv(kritzelkaffees):
     filename = "KritzelKaffees.csv" 
     with open(filename, 'w', encoding="utf-8") as csvfile:
-        csvfile.write("TwitterID,Datum,TweetText,Bild\n")
+        csvfile.write("TwitterLink,Datum,TweetText,Bild\n")
         for k in kritzelkaffees:
             # escaping new lines is needed, but importing it in google sheets is a bit stupid, so we just remove them 
-            csvfile.write(str(k.id) +","+ k.date +",\""+ k.text.replace('\n',' ') +"\",=image(\""+ k.imglink + "\")\n")
+            csvfile.write("https://twitter.com/datGestruepp/status/"+str(k.id) +","+ k.date +",\""+ k.text.replace('\n',' ') +"\",=image(\""+ k.imglink + "\")\n")
     return filename
 
 if __name__ == "__main__":
