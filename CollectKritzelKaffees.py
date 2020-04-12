@@ -1,11 +1,12 @@
 from twitter import Twitter,OAuth
+from dateutil import parser
 
 class KritzelKaffeeTweet:
     def __init__(self, id, date, imglink, text):
          self.id = id
          self.date = date
          self.imglink = imglink
-         self.text = text
+         self.text = text 
 
 
 def get_tweets():
@@ -29,31 +30,18 @@ def convert_to_KritzelKaffeeTweet(tweets):
     result = []
     for tweet in tweets:
         if ('media' in tweet['entities']):
-            result.append(KritzelKaffeeTweet(tweet['id'], tweet['created_at'], tweet['entities']['media'][0]['media_url'], tweet['text']))
+            postedAtDate = parser.parse(tweet['created_at'])
+            result.append(KritzelKaffeeTweet(tweet['id'], postedAtDate.strftime("%d.%m.%Y"), tweet['entities']['media'][0]['media_url'], tweet['text']))
     return result
 
 def save_csv(kritzelkaffees):
     filename = "KritzelKaffees.csv" 
     with open(filename, 'w', encoding="utf-8") as csvfile:
+        csvfile.write("TwitterID,Datum,TweetText,Bild\n")
         for k in kritzelkaffees:
-            csvfile.write(str(k.id) +",'"+ k.date +"',"+ repr(k.text) +",'"+ k.imglink + "'\n")
+            # escaping new lines is needed, but importing it in google sheets is a bit stupid, so we just remove them 
+            csvfile.write(str(k.id) +","+ k.date +",\""+ k.text.replace('\n',' ') +"\",=image(\""+ k.imglink + "\")\n")
     return filename
-
-def save_html(kritzelkaffees):
-    filename = "KritzelKaffees.html"
-    with open('html/'+filename, 'w', encoding="utf-8") as htmlfile:
-        from HtmlTemplate import htmlstart, htmlend
-        htmlfile.write(htmlstart)
-        for k in kritzelkaffees:
-            htmlfile.write("<tr>\n")
-            htmlfile.write("<td>"+k.date+"</td>\n")
-            htmlfile.write("<td>"+str(k.id)+"???</td>\n")
-            htmlfile.write("<td>"+k.text+"</td>\n")
-            htmlfile.write("<td><img src='"+k.imglink+"' width='200px'></td>\n")
-            htmlfile.write("</tr>\n")
-        htmlfile.write(htmlend)
-    return filename
-
 
 if __name__ == "__main__":
     from TwitterTokens import *
@@ -64,7 +52,5 @@ if __name__ == "__main__":
     print('Found ' + str(len(kritzelkaffees)) + ' KritzelKaffee tweets!')
     csvfilename = save_csv(kritzelkaffees)
     print('Wrote data to ' + csvfilename)
-#    htmlfilename = save_html(kritzelkaffees)
-#    print('Wrote data to ' + htmlfilename)
     print('Bye')
 
