@@ -1,0 +1,2377 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<h2>KritzelKaffees</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<table id="myTable">
+  <col width="30">
+  <col width="80">
+  <tr class="header">
+    <th>Bild</th>
+    <th>Datum</th>
+    <th>Gast</th>
+    <th>Text</th>
+  </tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1249215673059831808'><img src=http://pbs.twimg.com/media/EUhineZWkAU2M0H.jpg width='300px'></a></td>
+<td>12.04.2020</td>
+<td>Steven Quartz Universe</td>
+<td>Irgendwas mit Universum aha. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1248853285479432192'><img src=http://pbs.twimg.com/media/EUIqjLGWkAEgfMn.jpg width='300px'></a></td>
+<td>11.04.2020</td>
+<td>Der vierte Doktor (Dr. Who)</td>
+<td>Schön dich auch mal kennen zu lernen. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1248490899119714304'><img src=http://pbs.twimg.com/media/EUIqIftWkAAGqLB.jpg width='300px'></a></td>
+<td>10.04.2020</td>
+<td>Woingenau (Pokemon)</td>
+<td>Wohin? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1248128509580423171'><img src=http://pbs.twimg.com/media/EUIpirFX0AAs3IE.jpg width='300px'></a></td>
+<td>09.04.2020</td>
+<td>GLaDOS (Portal)</td>
+<td>Ach so. Ja klar. Logisch. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1247766120716615680'><img src=http://pbs.twimg.com/media/ET-bgZ7X0AQYcLI.jpg width='300px'></a></td>
+<td>08.04.2020</td>
+<td>Pyramid Head (Silent Hill)</td>
+<td>Ähm.... #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1247403733597728769'><img src=http://pbs.twimg.com/media/ET-bJHuWoAIif_E.jpg width='300px'></a></td>
+<td>07.04.2020</td>
+<td>Gromit</td>
+<td>Hallo Gromit! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1246678956998303745'><img src=http://pbs.twimg.com/media/ETuzM_5WoAAfaPT.jpg width='300px'></a></td>
+<td>05.04.2020</td>
+<td>Wallace</td>
+<td>Cracker und Käse mag ich auch voll gern! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1246316570512486401'><img src=http://pbs.twimg.com/media/ETuykufWsAMuCXH.jpg width='300px'></a></td>
+<td>04.04.2020</td>
+<td>Kuzco (Ein Königreich für ein Lama)</td>
+<td>Sie sind ein König? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1245954181325864961'><img src=http://pbs.twimg.com/media/ETux3LNWsAENJ6R.jpg width='300px'></a></td>
+<td>03.04.2020</td>
+<td>Togepi (Pokemon)</td>
+<td>Nawww! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1245591793690791940'><img src=http://pbs.twimg.com/media/ETbFJvIXsAERsN1.jpg width='300px'></a></td>
+<td>02.04.2020</td>
+<td>Der Wurm aus Die Reise ins Labyrinth</td>
+<td>Und du bist jetz eine Rau... ne Wurm? Hä? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1245229405653344256'><img src=http://pbs.twimg.com/media/ETbEoOLXgAISI6L.jpg width='300px'></a></td>
+<td>01.04.2020</td>
+<td>Bauz (Pokemon)</td>
+<td>Huh! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1244867017762635786'><img src=http://pbs.twimg.com/media/EUYHb9YXYAAfTxs.jpg width='300px'></a></td>
+<td>31.03.2020</td>
+<td>Doctor Snuggles</td>
+<td>Guten Tag Her Doktor! #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1244504632149151744'><img src=http://pbs.twimg.com/media/ETStcOuXYAAIPFQ.jpg width='300px'></a></td>
+<td>30.03.2020</td>
+<td>Elroy Jetson (Die Jetsons)</td>
+<td>Awwww! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1244142242983489536'><img src=http://pbs.twimg.com/media/ETStA8bWAAAD31P.jpg width='300px'></a></td>
+<td>29.03.2020</td>
+<td>Sonic The Hedgehog</td>
+<td>Ähm... hallo. Bitte nicht so schnell am Morgen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1243794954708815872'><img src=http://pbs.twimg.com/media/ETSspFsX0AE3VkU.jpg width='300px'></a></td>
+<td>28.03.2020</td>
+<td>Papa Wutz</td>
+<td>Guten Morgen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1243432566398406656'><img src=http://pbs.twimg.com/media/ES5jzqVXYAAC6tm.jpg width='300px'></a></td>
+<td>27.03.2020</td>
+<td>Protagonist the longing</td>
+<td>Nawwww. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1243070179732606976'><img src=http://pbs.twimg.com/media/ES5jLbIWsAE83bj.jpg width='300px'></a></td>
+<td>26.03.2020</td>
+<td>Jim Knopf</td>
+<td>Ach hallo! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1242707791070015488'><img src=http://pbs.twimg.com/media/ES3Xa5sU4AMW1sC.jpg width='300px'></a></td>
+<td>25.03.2020</td>
+<td>Luigi</td>
+<td>Guten Morgen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1242345402185154560'><img src=http://pbs.twimg.com/media/ES3XDpFVAAcKCLW.jpg width='300px'></a></td>
+<td>24.03.2020</td>
+<td>Mooncake (Final Space)</td>
+<td>Och! Wer bist du denn? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1241983015502348289'><img src=http://pbs.twimg.com/media/ESs0rbZXkAIxs5G.jpg width='300px'></a></td>
+<td>23.03.2020</td>
+<td>Mega Man</td>
+<td>Ach hallo! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1241620626999095297'><img src=http://pbs.twimg.com/media/ESs0LbKXsAEGwgT.jpg width='300px'></a></td>
+<td>22.03.2020</td>
+<td>Sandwurm (Beetlejuice)</td>
+<td>Huch! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1241258239171256321'><img src=http://pbs.twimg.com/media/ESszLlzWAAE6mOS.jpg width='300px'></a></td>
+<td>21.03.2020</td>
+<td>Frankensteins Braut</td>
+<td>Ach und sie sind die Braut von äähm... #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1240533463482208256'><img src=http://pbs.twimg.com/media/ESsx1hcWoAU6RcJ.jpg width='300px'></a></td>
+<td>19.03.2020</td>
+<td>Barney Geröllheimer (Familie Feuerstein)</td>
+<td>Dich kenn ich! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1240171075075551232'><img src=http://pbs.twimg.com/media/ESa9T7WWkAAIzre.jpg width='300px'></a></td>
+<td>18.03.2020</td>
+<td>Pixelskelett von AndiDev</td>
+<td>Hey! Du kannst doch auch so toll tanzen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1239808688531136514'><img src=http://pbs.twimg.com/media/ESH8HgoWkAEWUGs.jpg width='300px'></a></td>
+<td>17.03.2020</td>
+<td>Fortnite Lama</td>
+<td>Naaaaaaaa? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1239446299243667456'><img src=http://pbs.twimg.com/media/ESH7oTsW4AU6B9c.jpg width='300px'></a></td>
+<td>16.03.2020</td>
+<td>Captain Future</td>
+<td>Hey Capitain... wie sieht den die Future so aus... mit uns. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1239083911642329088'><img src=http://pbs.twimg.com/media/ES0v-pyXgAEk0X7.jpg width='300px'></a></td>
+<td>15.03.2020</td>
+<td>Tatort Reiniger</td>
+<td>Das ist doch eindeutig ein Tatort!! Das sieht man doch!! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1238721524632367105'><img src=http://pbs.twimg.com/media/ER3MWIJXkAAydGM.jpg width='300px'></a></td>
+<td>14.03.2020</td>
+<td>Ultrigaria (Pokemon)</td>
+<td>Guten Morgen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1238359135931912192'><img src=http://pbs.twimg.com/media/ER3MBT4WAAc4nau.jpg width='300px'></a></td>
+<td>13.03.2020</td>
+<td>Carrie</td>
+<td>Mein Kaffee brennt. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1237996748565512195'><img src=http://pbs.twimg.com/media/ER3LuD4XYAMUhKd.jpg width='300px'></a></td>
+<td>12.03.2020</td>
+<td>Walter Röhrich (Werner)</td>
+<td>Eckaaaaaaaaahhhhrd!!! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1237634359873568769'><img src=http://pbs.twimg.com/media/ERkqXTEXYAEaqLl.jpg width='300px'></a></td>
+<td>11.03.2020</td>
+<td>Voltobal (Pokemon)</td>
+<td>BRZZZLLL! #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1237271972125585409'><img src=http://pbs.twimg.com/media/ERkqEXtWkAMpCT2.jpg width='300px'></a></td>
+<td>10.03.2020</td>
+<td>Marie (Aristocats)</td>
+<td>KADSE! ❤️ #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1236909584750698499'><img src=http://pbs.twimg.com/media/ERfryQ_X0AAQE0-.jpg width='300px'></a></td>
+<td>09.03.2020</td>
+<td>Matilda</td>
+<td>Boah! Toll! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1236547198382264321'><img src=http://pbs.twimg.com/media/ERI30N1XkAACf53.jpg width='300px'></a></td>
+<td>08.03.2020</td>
+<td>Bluzuk (Pokemon)</td>
+<td>Awwww! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1236184810030346241'><img src=http://pbs.twimg.com/media/ERI3Z58XYAE5ka9.jpg width='300px'></a></td>
+<td>07.03.2020</td>
+<td>Plankton (aus Spongebob)</td>
+<td>Ach du bist auch so ein Weltherrschaftstyp richtig? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1235822420881051648'><img src=http://pbs.twimg.com/media/ERGDDZyWkAAO5n2.jpg width='300px'></a></td>
+<td>06.03.2020</td>
+<td>Professor Trelawny (Harry Potter)</td>
+<td>Und was sagt jetzt mein Kaffeesatz Professor? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1235460032701108224'><img src=http://pbs.twimg.com/media/ERGCyYQX0AAYMOL.jpg width='300px'></a></td>
+<td>05.03.2020</td>
+<td>Tim und Struppi</td>
+<td>Guten Morgen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1235097644885848064'><img src=http://pbs.twimg.com/media/EQ7echMXkAEVyue.jpg width='300px'></a></td>
+<td>04.03.2020</td>
+<td>Cat Woman</td>
+<td>Also... sie sind jetzt ne Frau im Ganzkörperlederlackkostüm... Aha. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1234659759447347200'><img src=http://pbs.twimg.com/media/EQm7rDpXUAEF4iN.jpg width='300px'></a></td>
+<td>03.03.2020</td>
+<td>Kenny (South Park)</td>
+<td>Mmppffmmfffp! Aha! Hm. Ja. Verstehe. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1234372869880041478'><img src=http://pbs.twimg.com/media/EQm7O7FWkAICoND.jpg width='300px'></a></td>
+<td>02.03.2020</td>
+<td>Lumiere (Die Schöne und das Biest)</td>
+<td>Ich bin sehr gern dein Gast! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1234010481842626561'><img src=http://pbs.twimg.com/media/EQmbfTfX0AARZnl.jpg width='300px'></a></td>
+<td>01.03.2020</td>
+<td>Ickis (Aaahh!!! Monster)</td>
+<td>Huch! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1233648093742030848'><img src=http://pbs.twimg.com/media/EQmbG9gXUAAEdQ5.jpg width='300px'></a></td>
+<td>29.02.2020</td>
+<td>Samson (Sesamstraße)</td>
+<td>Ach Samson! Wie schön! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1233285706828648448'><img src=http://pbs.twimg.com/media/EQWk7b6XUAAmkrC.jpg width='300px'></a></td>
+<td>28.02.2020</td>
+<td>Abrax (Abrafaxe)</td>
+<td>Ihr drei erlebt echt viel oder? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1232923319223115776'><img src=http://pbs.twimg.com/media/EQWkoY1XsAEis6x.jpg width='300px'></a></td>
+<td>27.02.2020</td>
+<td>Joker</td>
+<td>Ömm... #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1232560929767854081'><img src=http://pbs.twimg.com/media/EQWkUA-WkAY-yy9.jpg width='300px'></a></td>
+<td>26.02.2020</td>
+<td>Milka Kuh</td>
+<td>Gnihihi. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1232198543164600322'><img src=http://pbs.twimg.com/media/EQWjw51WkAAB1_Y.jpg width='300px'></a></td>
+<td>25.02.2020</td>
+<td>Babrax (Abrafaxe)</td>
+<td>Ach wie nett! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1231836155190169602'><img src=http://pbs.twimg.com/media/EQVVHH4XYAAKWjE.jpg width='300px'></a></td>
+<td>24.02.2020</td>
+<td>Chewie (Captain Marvel's Katze/Flerken)</td>
+<td>Ähm... ist das normal? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1231473767139819522'><img src=http://pbs.twimg.com/media/EQVUoh4WsAEKwJw.jpg width='300px'></a></td>
+<td>23.02.2020</td>
+<td>Gali von Andromeda (Hallo Spencer)</td>
+<td>Wie schön dich zu sehen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1231111378372583424'><img src=http://pbs.twimg.com/media/EQVUVohW4AAkwEe.jpg width='300px'></a></td>
+<td>22.02.2020</td>
+<td>Itchy (Simpsons)</td>
+<td>Aber warum?? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1230748991782105088'><img src=http://pbs.twimg.com/media/EQNl2L3XkAIAmG0.jpg width='300px'></a></td>
+<td>21.02.2020</td>
+<td>Califax (Abrafaxe)</td>
+<td>Nawwww!  #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1230386603648004097'><img src=http://pbs.twimg.com/media/EQCo5NxWoAAAtZl.jpg width='300px'></a></td>
+<td>20.02.2020</td>
+<td>Barbamama (Barbapapa)</td>
+<td>Hübsche Blümchen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1230024214729523203'><img src=http://pbs.twimg.com/media/EQCodvdUcAAgwAc.jpg width='300px'></a></td>
+<td>19.02.2020</td>
+<td>Weinender Engel (Doctor Who)</td>
+<td>NICHT BLINZELN!! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1229661827417571329'><img src=http://pbs.twimg.com/media/EQCoKM_WsAsVk9e.jpg width='300px'></a></td>
+<td>18.02.2020</td>
+<td>Johnny Bravo</td>
+<td>3-Wetter-Taft? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1229299439392772097'><img src=http://pbs.twimg.com/media/EPyXZ4PXUAY_aoz.jpg width='300px'></a></td>
+<td>17.02.2020</td>
+<td>Kommunikationswürfel aus 'Mein Vater ist ein Außerirdischer'</td>
+<td>Aber mein Papa ist doch gar kein Außerirdischer! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1228937051178881026'><img src=http://pbs.twimg.com/media/EPyWza3X0AAm0zo.jpg width='300px'></a></td>
+<td>16.02.2020</td>
+<td>Der dänische Koch (Muppet Show)</td>
+<td>Was gibt’s denn heute? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1228574664089317376'><img src=http://pbs.twimg.com/media/EPyWZ1LWAAAzYap.jpg width='300px'></a></td>
+<td>15.02.2020</td>
+<td>Gumba (Super Mario)</td>
+<td>Ömmm...  #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1228212276672397312'><img src=http://pbs.twimg.com/media/EPs43FAWkAAClzs.jpg width='300px'></a></td>
+<td>14.02.2020</td>
+<td>Betty Boop</td>
+<td>Ach. Tag die Dame. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1227849887703650304'><img src=http://pbs.twimg.com/media/EPs4mPtWkAAyTqU.jpg width='300px'></a></td>
+<td>13.02.2020</td>
+<td>Rick (Rick and Morty)</td>
+<td>Ich hab nix gemacht! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1227487500459003904'><img src=http://pbs.twimg.com/media/EPeW8wwWAAMcKJN.jpg width='300px'></a></td>
+<td>12.02.2020</td>
+<td>Flipp (Biene Maja) </td>
+<td>Hüüüüüüühüpf! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1227125113612619778'><img src=http://pbs.twimg.com/media/EPeWiy-WkAQ3zIa.jpg width='300px'></a></td>
+<td>11.02.2020</td>
+<td>Der Struwwelpeter</td>
+<td>Nun ja. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1226762724496986112'><img src=http://pbs.twimg.com/media/EPeWJB2WAAAWTBz.jpg width='300px'></a></td>
+<td>10.02.2020</td>
+<td>Die drei ???</td>
+<td>Da ist ein Fragezeichen in meinem Kaffee! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1226400337096896512'><img src=http://pbs.twimg.com/media/EPcSm6-X0AEgO1l.jpg width='300px'></a></td>
+<td>09.02.2020</td>
+<td>Captain Caveman</td>
+<td>Ach. Rasiere war damals noch nicht so oder? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1226037949709479937'><img src=http://pbs.twimg.com/media/EPcSJtlWsAAxHOf.jpg width='300px'></a></td>
+<td>08.02.2020</td>
+<td>Sailor Merkur (Sailor Moon)</td>
+<td>Ich wollte immer so sein wie du! So voll schlau und so!  #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1225675561382686721'><img src=http://pbs.twimg.com/media/EPT-hL7X4AIlUiK.jpg width='300px'></a></td>
+<td>07.02.2020</td>
+<td>Wilson (Don't Starve)</td>
+<td>Ja, ich war auch etwas zu lange wach in der Nacht. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1225313173491736576'><img src=http://pbs.twimg.com/media/EPT9-4UXsAES-3O.jpg width='300px'></a></td>
+<td>06.02.2020</td>
+<td>Kimba, der weiße Löwe</td>
+<td>Kimba. Ach so. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1224950784892125186'><img src=http://pbs.twimg.com/media/EPSRUYlWkAAR7ik.jpg width='300px'></a></td>
+<td>05.02.2020</td>
+<td>Kettenhund (Mario)</td>
+<td>Huch!  #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1224588397353762816'><img src=http://pbs.twimg.com/media/EPSQ3lQW4AAlW_N.jpg width='300px'></a></td>
+<td>04.02.2020</td>
+<td>Sam (LucasArts das Adventure Sam & Max Hit the Road)</td>
+<td>Diese Dinge kann man nicht zusammen benutzen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1224226009517416448'><img src=http://pbs.twimg.com/media/EO6XiXqWAAA_UAx.jpg width='300px'></a></td>
+<td>03.02.2020</td>
+<td>Professor Hubert Farnsworth (Futurama)</td>
+<td>Warum so grummelig! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1223863621882654721'><img src=http://pbs.twimg.com/media/EO6XJ0uW4AE0-Z2.jpg width='300px'></a></td>
+<td>02.02.2020</td>
+<td>Roadrunner (Looney Tunes)</td>
+<td>Miep miep miep! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1223501234444759040'><img src=http://pbs.twimg.com/media/EO4WnQHWAAEShev.jpg width='300px'></a></td>
+<td>01.02.2020</td>
+<td>Facehugger (Alien)</td>
+<td>Aaaaaaaaaaah! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1223138845278916608'><img src=http://pbs.twimg.com/media/EO4WJc7W4AEMskh.jpg width='300px'></a></td>
+<td>31.01.2020</td>
+<td>Bob der Baumeister</td>
+<td>Na toll! *piiiep* Ohrwurm! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1222776457795121153'><img src=http://pbs.twimg.com/media/EOg2IDLX4AI49ah.jpg width='300px'></a></td>
+<td>30.01.2020</td>
+<td>Peter Griffin (Family Guy)</td>
+<td>Hä? Ich dachte sie sind so ein Gamer? Nicht? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1222414070533349376'><img src=http://pbs.twimg.com/media/EOg1wu4X4AYo863.jpg width='300px'></a></td>
+<td>29.01.2020</td>
+<td>WILSON!!!! (Cast Away)</td>
+<td>Wiiiiilsoooooooon!! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1222051681698902017'><img src=http://pbs.twimg.com/media/EOg1bxvXkAAX3ik.jpg width='300px'></a></td>
+<td>28.01.2020</td>
+<td>Mr. Potato Head (Toy Story)</td>
+<td>Tag der Herr. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1221689295909597184'><img src=http://pbs.twimg.com/media/EOWIIdYX0AAT4NB.jpg width='300px'></a></td>
+<td>27.01.2020</td>
+<td>Finchen (Sesamstraße)</td>
+<td>Dich wollte ich schon immer mal treffen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1221326906760617984'><img src=http://pbs.twimg.com/media/EOWHgnuX4AYgUmS.jpg width='300px'></a></td>
+<td>26.01.2020</td>
+<td>Baby Yoda</td>
+<td>Awwwwwww! Soooo klein! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1220964518840492033'><img src=http://pbs.twimg.com/media/EOWGidbW4AIEhJZ.jpg width='300px'></a></td>
+<td>25.01.2020</td>
+<td>John Lennon</td>
+<td>Peace! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1220602130844676096'><img src=http://pbs.twimg.com/media/EOWFoX8WsAItl9W.jpg width='300px'></a></td>
+<td>24.01.2020</td>
+<td>Thaddeus Tentakel (Spongebob)</td>
+<td>Ich möchte gern was bestellen! Gnihihihi! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1220239744036065280'><img src=http://pbs.twimg.com/media/EOOQaG3XkAYA48_.jpg width='300px'></a></td>
+<td>23.01.2020</td>
+<td>Ditto (Pokemon)</td>
+<td>Ewwwww! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1219877355428237312'><img src=http://pbs.twimg.com/media/EOOPznXW4AAl92v.jpg width='300px'></a></td>
+<td>22.01.2020</td>
+<td>Little Man (Pink Panther)</td>
+<td>Haben sie nicht sonst noch ne Leiter oder so? Oder Farbe? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1219514968174989312'><img src=http://pbs.twimg.com/media/EOOPfjBX0AAYVAT.jpg width='300px'></a></td>
+<td>21.01.2020</td>
+<td>Pingu</td>
+<td>Noot noot! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1219152579797700608'><img src=http://pbs.twimg.com/media/EOF-FNFWsAInSIs.jpg width='300px'></a></td>
+<td>20.01.2020</td>
+<td>Pan Tau</td>
+<td>Guten Morgen Herr Tau! Darf ich sie so nennen? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1218790190992498690'><img src=http://pbs.twimg.com/media/EOF80jaWoAAJQld.jpg width='300px'></a></td>
+<td>19.01.2020</td>
+<td>Luna Lovegood (Harry Potter</td>
+<td>Ach! Na? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1218427803277807617'><img src=http://pbs.twimg.com/media/EOF8bUoX4AAcbAw.jpg width='300px'></a></td>
+<td>18.01.2020</td>
+<td>Tribbles (Star Trek)</td>
+<td>Hülffä?! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1218065415261212674'><img src=http://pbs.twimg.com/media/EN8UQ8HWAAIPnt2.jpg width='300px'></a></td>
+<td>17.01.2020</td>
+<td>Nibbler (Futurama)</td>
+<td>Was bist du denn? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1217703028993581057'><img src=http://pbs.twimg.com/media/EN8T2AHX0AAJ9me.jpg width='300px'></a></td>
+<td>16.01.2020</td>
+<td>Edward (twilight) </td>
+<td>Also dieses Glitzern sieht nicht so gesund aus! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1217340640092135430'><img src=http://pbs.twimg.com/media/ENyFj5hW4AEFx3U.jpg width='300px'></a></td>
+<td>15.01.2020</td>
+<td>Die Braut / Black Mamba / Kiddo (Kill Bill)</td>
+<td>Ja... ähmmm... Tag auch. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1216978252893319168'><img src=http://pbs.twimg.com/media/ENyFQ12WwAA3fqG.jpg width='300px'></a></td>
+<td>14.01.2020</td>
+<td>Merlin (Die Hexe und der Zauberer)</td>
+<td>Danke ich möchte mich nicht in irgendetwas verwandeln. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1216615865715552256'><img src=http://pbs.twimg.com/media/ENyE21sXYAEPI8z.jpg width='300px'></a></td>
+<td>13.01.2020</td>
+<td>Mila Superstar</td>
+<td>Ich hatte kurz Sorge du wirfst ihn mit dem Volleyball ab. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1216253476533084160'><img src=http://pbs.twimg.com/media/ENyEbX6WwAE1vYo.jpg width='300px'></a></td>
+<td>12.01.2020</td>
+<td>Wut (Alles steht Kopf)</td>
+<td>Heeeey, man kann jederzeit noch Zucker oder Milch rein machen! Ganz wie du willst! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1215891088617041921'><img src=http://pbs.twimg.com/media/ENnzcSXXkAAUbNo.jpg width='300px'></a></td>
+<td>11.01.2020</td>
+<td>BB-8 (Star Wars)</td>
+<td>Och. Wie knuffig. Ja ja, düdelüd und so! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1215528701431111682'><img src=http://pbs.twimg.com/media/ENnr8mPXsAElPe7.jpg width='300px'></a></td>
+<td>10.01.2020</td>
+<td>Paddington</td>
+<td>Oh. Engländer? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1215166313783427072'><img src=http://pbs.twimg.com/media/ENiZLehXUAELVUC.jpg width='300px'></a></td>
+<td>09.01.2020</td>
+<td>Kim Possible</td>
+<td>Ist das nicht ein bisschen kalt? Um die Jahreszeit? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1214803924646936576'><img src=http://pbs.twimg.com/media/ENd5gidU4AA5SUU.jpg width='300px'></a></td>
+<td>08.01.2020</td>
+<td> Stan S. Stanman (Monkey Island)</td>
+<td>Und was machen sie so? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1214441536621953025'><img src=http://pbs.twimg.com/media/ENd5LXYXYAEXoWt.jpg width='300px'></a></td>
+<td>07.01.2020</td>
+<td>WALL-E</td>
+<td>Awww! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1214079149209313280'><img src=http://pbs.twimg.com/media/ENNlP8_XkAE95Nv.jpg width='300px'></a></td>
+<td>06.01.2020</td>
+<td>Das Sams</td>
+<td>Ui! Und jetzt darf ich mir was wünschen? Oder muss ich bis zum Samstag warten? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1213716761809489920'><img src=http://pbs.twimg.com/media/ENNjhcPW4AA4dG3.jpg width='300px'></a></td>
+<td>05.01.2020</td>
+<td>LeChuck (Monkey Island)</td>
+<td>Ach, hallo, Ähm... Tick Tack vielleicht? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1213354373612474368'><img src=http://pbs.twimg.com/media/EM-y3ZqXsAEQ9s1.jpg width='300px'></a></td>
+<td>04.01.2020</td>
+<td>Bobbin Treadbare (Loom Spiel von 1990)</td>
+<td>Aber, aber, aber ich bin doch gar nicht aus Wolle!! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1212991985814003712'><img src=http://pbs.twimg.com/media/EM-ygwxXkAEGM4F.jpg width='300px'></a></td>
+<td>03.01.2020</td>
+<td>Frau Pfeffertopf</td>
+<td>Und kann der Löffel irgendwas? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1212629598913085440'><img src=http://pbs.twimg.com/media/EM34pQsWkAAbHnV.jpg width='300px'></a></td>
+<td>02.01.2020</td>
+<td>Red Fraggle (Die Fraggles)</td>
+<td>Hallo! Schicke Frisur! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1212267209998905344'><img src=http://pbs.twimg.com/media/EMqQg6hX0AEkVWS.jpg width='300px'></a></td>
+<td>01.01.2020</td>
+<td>Jean-Baptiste Emanuel Zorg (Das fünfte Element)</td>
+<td>Wer sind sie? Und warum haben Sie Plastik auf dem Kopf? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1211904821751689217'><img src=http://pbs.twimg.com/media/EMqPTYcXUAEdD_c.jpg width='300px'></a></td>
+<td>31.12.2019</td>
+<td>James (Dinner for one)</td>
+<td>Sind sie nicht etwas zu jung für Miss Sophie? Jaja, so ein Pinselstrich macht jünger.  #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1211542435861417984'><img src=http://pbs.twimg.com/media/EMqO_WMW4AY19St.jpg width='300px'></a></td>
+<td>30.12.2019</td>
+<td>Skeks (Der dunkle Kristall)</td>
+<td>Ich hab keinen Kristall! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1211180046544777216'><img src=http://pbs.twimg.com/media/EMn9RHTXsAAEvrI.jpg width='300px'></a></td>
+<td>29.12.2019</td>
+<td>Madam Mim (Die Hexe und der Zauberer)</td>
+<td>Können sie meine Tasse verzaubern, das die immer warm bleibt? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1210817657823518722'><img src=http://pbs.twimg.com/media/EMaHlrAWkAExGip.jpg width='300px'></a></td>
+<td>28.12.2019</td>
+<td>Bugs Bunny</td>
+<td>Oha. Etwas zu viel Kaffee gehabt? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1210455269999644674'><img src=http://pbs.twimg.com/media/EMaHQ9dXUAEfv4z.jpg width='300px'></a></td>
+<td>27.12.2019</td>
+<td>Kaa (Dschungelbuch)</td>
+<td>Glaauuubeeee miiiiiir.... #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1210092883455275008'><img src=http://pbs.twimg.com/media/EMaCvAvX0AIBme0.jpg width='300px'></a></td>
+<td>26.12.2019</td>
+<td>Marilyn Monroe</td>
+<td>Ist der Lippenstift echt? Toll! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1209730495145111552'><img src=http://pbs.twimg.com/media/EMO6b4CXkAASXJq.jpg width='300px'></a></td>
+<td>25.12.2019</td>
+<td><3</td>
+<td>Für alle die nicht da sind. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1209368107187200001'><img src=http://pbs.twimg.com/media/EMJDMMqXsAMqWLI.jpg width='300px'></a></td>
+<td>24.12.2019</td>
+<td>großer Tannenbaum (Redraw)</td>
+<td>Halleluja! Und zur Feier des Tages, ausnahmsweise noch ein redraw! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1209005718571012096'><img src=http://pbs.twimg.com/media/EMDMbBKXUAIbf_N.jpg width='300px'></a></td>
+<td>23.12.2019</td>
+<td>Tannenbaum-Redraw</td>
+<td>Heilige! Es ist ein Jahr rum! Deshalb heute ein Redraw! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1208643331124654081'><img src=http://pbs.twimg.com/media/EMDLda3XsAYXbC6.jpg width='300px'></a></td>
+<td>22.12.2019</td>
+<td>Cap. Jack Sparrow</td>
+<td>Joho! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1208280942860587008'><img src=http://pbs.twimg.com/media/EL7tn-AXYAAX_a3.jpg width='300px'></a></td>
+<td>21.12.2019</td>
+<td>Jake (Adventure Time)</td>
+<td>Und sie sind wirklich ein Hund? Gelb?! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1207918554911313920'><img src=http://pbs.twimg.com/media/EL7s8izWsAcfF_b.jpg width='300px'></a></td>
+<td>20.12.2019</td>
+<td>Gretchen Grundler (Disney's Große Pause)</td>
+<td>Ähm... ja ne ich bin jetzt nicht soooo schlau. Aber is ja nicht so schlimm. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1207556167549014016'><img src=http://pbs.twimg.com/media/ELx5-n2XUAcp9CR.jpg width='300px'></a></td>
+<td>19.12.2019</td>
+<td>Forky (Toy Story 4)</td>
+<td>Und was... Ähm... wer...? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1207193779951874053'><img src=http://pbs.twimg.com/media/ELqOFxCW4AEv6pO.jpg width='300px'></a></td>
+<td>18.12.2019</td>
+<td>Der Regenbogenfisch</td>
+<td>Schicke Schuppen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1206831392778264576'><img src=http://pbs.twimg.com/media/ELqN0SVWoAcSehN.jpg width='300px'></a></td>
+<td>17.12.2019</td>
+<td>Friedrich und Friedrich (Luzie, der Schrecken der Straße)</td>
+<td>Schön das ihr da seid! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1206469004623089664'><img src=http://pbs.twimg.com/media/ELiAA_sXUAMC2GK.jpg width='300px'></a></td>
+<td>16.12.2019</td>
+<td>Marsianer (Sesamstraße)</td>
+<td>Yepyepyepyeeeeep! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1206106616883335169'><img src=http://pbs.twimg.com/media/ELfCXysWkAIj5ch.jpg width='300px'></a></td>
+<td>15.12.2019</td>
+<td>Elvis (Hallo Spencer)</td>
+<td>Und sie kennen den Spencer auch? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1205744228623699968'><img src=http://pbs.twimg.com/media/ELXxi8eX0AAYbji.jpg width='300px'></a></td>
+<td>14.12.2019</td>
+<td>Ritter Rost</td>
+<td>Ui! Einen Ritter hatte ich noch nie zu Besuch! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1205381841756344320'><img src=http://pbs.twimg.com/media/ELXxAQ1WoAAuokM.jpg width='300px'></a></td>
+<td>13.12.2019</td>
+<td>Benny Frandsen und Kjeld Jensen (Olsenbande)</td>
+<td>Ach wie schön! Holt ihr den Egon wieder ab? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1205019453945077760'><img src=http://pbs.twimg.com/media/ELXwlASWwAAWN9S.jpg width='300px'></a></td>
+<td>12.12.2019</td>
+<td>Perry das Schnabeltier (Phineas und Ferb)</td>
+<td>Also was machen sie jetzt genau? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1204657065051840512'><img src=http://pbs.twimg.com/media/ELDUyuJXsAApSpJ.jpg width='300px'></a></td>
+<td>11.12.2019</td>
+<td>Slenderman</td>
+<td>Ich hab aber gar keine Zettel aufgesammelt! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1204294676360171522'><img src=http://pbs.twimg.com/media/EK-edHqX0AA0K27.jpg width='300px'></a></td>
+<td>10.12.2019</td>
+<td>Li-La-Launebär (Kinderserie)</td>
+<td>Und wie geht’s Metti? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1203932289845153793'><img src=http://pbs.twimg.com/media/EK-doTCXkAAlppq.jpg width='300px'></a></td>
+<td>09.12.2019</td>
+<td>Cosmo</td>
+<td>Ach... und die mit den rosa Haaren... ihr gehört zusammen richtig? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1203207512759164928'><img src=http://pbs.twimg.com/media/EKpexhMXUAYTAy2.jpg width='300px'></a></td>
+<td>07.12.2019</td>
+<td>Schlupp vom Grünen Stern (Augsburger Puppenkiste)</td>
+<td>Aaja... und wo kommen sie jetzt genau her? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1202845124776075265'><img src=http://pbs.twimg.com/media/EKpeBjvX0AANB__.jpg width='300px'></a></td>
+<td>06.12.2019</td>
+<td>Felix the Cat</td>
+<td>Und was ist das jetzt für eine spezielle Tasche die sie da haben? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1202482738428813321'><img src=http://pbs.twimg.com/media/EKpFhD7WsAAabrK.jpg width='300px'></a></td>
+<td>05.12.2019</td>
+<td>Gaston Lagaffe</td>
+<td>Sie erleben auch ganz schön viel oder? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1202120349757906944'><img src=http://pbs.twimg.com/media/EKpE9u5WsAA62aK.jpg width='300px'></a></td>
+<td>04.12.2019</td>
+<td>Max und Moritz (Wilhelm Busch) </td>
+<td>Euch hab ich aber lange nicht gesehen. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1201757963184001024'><img src=http://pbs.twimg.com/media/EKpEc9wWwAIxGu9.jpg width='300px'></a></td>
+<td>03.12.2019</td>
+<td>Captain America</td>
+<td>Tolles Schild haben sie da! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1201395575125463040'><img src=http://pbs.twimg.com/media/EKcNNK1XsAEipY-.jpg width='300px'></a></td>
+<td>02.12.2019</td>
+<td>Nils Holgerson</td>
+<td>Ach. Und auf der Gans fliegen sie überall hin? Toll! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1201033186425344000'><img src=http://pbs.twimg.com/media/EKcMxvjXkAARcX3.jpg width='300px'></a></td>
+<td>01.12.2019</td>
+<td>Red von M&M</td>
+<td>Guten Tag der Herr! Bleiben Sie doch ein bisschen länger! Gnihihihi. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1200670799394246658'><img src=http://pbs.twimg.com/media/EKP0VSBXkAAtq_W.jpg width='300px'></a></td>
+<td>30.11.2019</td>
+<td>Räuber Hotzenplotz</td>
+<td>Tag der Herr. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1200308409796644864'><img src=http://pbs.twimg.com/media/EKPznRoWwAMQoz1.jpg width='300px'></a></td>
+<td>29.11.2019</td>
+<td>Goldbär (Haribo)</td>
+<td>Warum haben sie Gummibärchen in meinen Kaffee getan? Das macht überhaupt keinen Sinn! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1199946023138926593'><img src=http://pbs.twimg.com/media/EKE8T1-XYAAHOxP.jpg width='300px'></a></td>
+<td>28.11.2019</td>
+<td>Tigger (Winnie Puuh)</td>
+<td>Sie springen womit?? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1199583635646451712'><img src=http://pbs.twimg.com/media/EKE79YxWoAEn2Wv.jpg width='300px'></a></td>
+<td>27.11.2019</td>
+<td>Wanda</td>
+<td>Deine Augen sind auch nur ganz wenig gruselig. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1199221247734734850'><img src=http://pbs.twimg.com/media/EJ7e16tXkAIpYHu.jpg width='300px'></a></td>
+<td>26.11.2019</td>
+<td>Cruella de Ville</td>
+<td>Nein ich hab keinen Hund. Warum fragen sie mich das? Sie sind gruselig! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1198858858254331907'><img src=http://pbs.twimg.com/media/EJ4xiL2XUAIoiAO.jpg width='300px'></a></td>
+<td>25.11.2019</td>
+<td>Rincewind der Zauberer (Scheibenweltromane Terry Pratchett)</td>
+<td>Aber Zaubern können sie schon oder? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1198496470472830977'><img src=http://pbs.twimg.com/media/EJlVa-1WsAETtQ_.jpg width='300px'></a></td>
+<td>24.11.2019</td>
+<td>Doozer (Fraggles)</td>
+<td>Ach guck! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1198134082816925696'><img src=http://pbs.twimg.com/media/EJlVDCoW4AI3QdQ.jpg width='300px'></a></td>
+<td>23.11.2019</td>
+<td>Willy Wonka (Charlie und die Schokoladenfabrik)</td>
+<td>Also ich hätt jetzt schon gerne Schokolade. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1197771696402358273'><img src=http://pbs.twimg.com/media/EJlUsmcXUAYlfNX.jpg width='300px'></a></td>
+<td>22.11.2019</td>
+<td>Phunk</td>
+<td>Und welches ist dein Lieblingspokemon? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1197409308343853056'><img src=http://pbs.twimg.com/media/EJbsMOUWkAAS1st.jpg width='300px'></a></td>
+<td>21.11.2019</td>
+<td>Dschinni (Aladdin)</td>
+<td>Wow! Und ich kann mir jetzt was Wünschen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1197046920880914434'><img src=http://pbs.twimg.com/media/EJbrZ69XUAEhG4-.jpg width='300px'></a></td>
+<td>20.11.2019</td>
+<td>Ruffy/Luffy (One Piece)</td>
+<td>Ach. Und sie sind jetzt Pirat? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1196684531463598080'><img src=http://pbs.twimg.com/media/EJRvwkFXUAESov6.jpg width='300px'></a></td>
+<td>19.11.2019</td>
+<td>Gaston (Die Schöne und das Biest)</td>
+<td>Boah ne! Nicht diese Schmalzlocke! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1196322144919179264'><img src=http://pbs.twimg.com/media/EJRvKBgXYAAyW4a.jpg width='300px'></a></td>
+<td>18.11.2019</td>
+<td>Zaubertroll (Spielzeug der 90er)</td>
+<td>Ein Troll?? EIN TROLL??! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1195959755791044608'><img src=http://pbs.twimg.com/media/EJbsrGwWoAERADu.jpg width='300px'></a></td>
+<td>17.11.2019</td>
+<td>Idefix</td>
+<td>Ich mag auch Bäume! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1195597367656865792'><img src=http://pbs.twimg.com/media/EJMLx4OX0AAgfnn.jpg width='300px'></a></td>
+<td>16.11.2019</td>
+<td>Guybrush Threepwood (Monkey Island)</td>
+<td>Aha! Sie wollen also Pirat werden? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1195234981804531712'><img src=http://pbs.twimg.com/media/EJAALfsWoAACF95.jpg width='300px'></a></td>
+<td>15.11.2019</td>
+<td>Voltilamm (Pokemon)</td>
+<td>Schon wieder ein Pokemon! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1194872591804092416'><img src=http://pbs.twimg.com/media/EI4N3_oWkAIm74G.jpg width='300px'></a></td>
+<td>14.11.2019</td>
+<td>Hedwig (Harry Potter)</td>
+<td>Endlich! Mein Brief! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1194510205456805888'><img src=http://pbs.twimg.com/media/EI4NfjyXUAIS6fB.jpg width='300px'></a></td>
+<td>13.11.2019</td>
+<td>Tiffy (Sesamstraße)</td>
+<td>Hallo Tiffi! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1194147816647479296'><img src=http://pbs.twimg.com/media/EIuQGpaX0AApx3C.jpg width='300px'></a></td>
+<td>12.11.2019</td>
+<td>Edward (Mit den Scherenhänden)</td>
+<td>Jaaaa, aber ich mag meine Haar gerade so wie sie sind. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1193424500412563456'><img src=http://pbs.twimg.com/media/EI_lQLOW4AAXeqJ.jpg width='300px'></a></td>
+<td>10.11.2019</td>
+<td>Professor Hershel Layton</td>
+<td>Hallo der Herr! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1193060652748869634'><img src=http://pbs.twimg.com/media/EIcrtVGWkAA2g7L.jpg width='300px'></a></td>
+<td>09.11.2019</td>
+<td>Leeloo Minai Lekatariba-Lamina-Tchai Ekbat De Sebat (Das fünfte Element)</td>
+<td>Hübsche Haarfarbe! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1192698265243934721'><img src=http://pbs.twimg.com/media/EIRUk5UX0AEsd0V.jpg width='300px'></a></td>
+<td>08.11.2019</td>
+<td>Herr Kaffee</td>
+<td>Okay der Herr. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1192335876690309120'><img src=http://pbs.twimg.com/media/EIRT9wEWkAMREdp.jpg width='300px'></a></td>
+<td>07.11.2019</td>
+<td>Hexe Ursula (Arielle)</td>
+<td>Ich möchte meine Stimme bitte behalten. Danke. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1191973488946536448'><img src=http://pbs.twimg.com/media/EIKe8woXkAAFGm5.jpg width='300px'></a></td>
+<td>06.11.2019</td>
+<td>Digda (Pokemon)</td>
+<td>Langsam gewöhne ich mich dran. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1191611102431531008'><img src=http://pbs.twimg.com/media/EIKekL2XkAAc91l.jpg width='300px'></a></td>
+<td>05.11.2019</td>
+<td>Grün-Tentakel (Day of the Tentacle und Maniac Mansion)</td>
+<td>Och... #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1191248713991233536'><img src=http://pbs.twimg.com/media/EH_t3kDXUAEqec4.jpg width='300px'></a></td>
+<td>04.11.2019</td>
+<td>Xenomorph (Alien)</td>
+<td>Ähmmmm.... #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1190886325555253248'><img src=http://pbs.twimg.com/media/EH_thhdX0AAtNJV.jpg width='300px'></a></td>
+<td>03.11.2019</td>
+<td>Lucy/Nyu (Elfenlied)</td>
+<td>Ach, praktisch so unsichtbare Extraarme.  #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1190523937547079680'><img src=http://pbs.twimg.com/media/EH4Gkw_W4AAw7hg.jpg width='300px'></a></td>
+<td>02.11.2019</td>
+<td>Little Misfortune</td>
+<td>Warum machst du Glitzer in meinen Kaffee? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1190161549471694849'><img src=http://pbs.twimg.com/media/EH4GEYEWoAE8V4P.jpg width='300px'></a></td>
+<td>01.11.2019</td>
+<td>Das Phantom (der Oper)</td>
+<td>Singen sie jetzt auch? Und warum sieht ihr Auge so komisch aus? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1189799162474303488'><img src=http://pbs.twimg.com/media/EHu0HFBW4AIkPlN.jpg width='300px'></a></td>
+<td>31.10.2019</td>
+<td>nur Halloween</td>
+<td>Danke Strüppi!  Mensch, wo hab ich heute nur meinen Kopf!? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1189436775556505601'><img src=http://pbs.twimg.com/media/EHuzdeTW4AA9cuh.jpg width='300px'></a></td>
+<td>30.10.2019</td>
+<td>Truhe (Scheibenwelt)</td>
+<td>Oookaaay... #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1189074387795771394'><img src=http://pbs.twimg.com/media/EHkGEgmWkAEIqzM.jpg width='300px'></a></td>
+<td>29.10.2019</td>
+<td>Casper (Der freundliche Geist)</td>
+<td>Jaaaaa, ich hab mich voooll erschreckt! Oh! Wir gruselt es mir! *seufz* #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1188711999762399234'><img src=http://pbs.twimg.com/media/EHa-IHSX4AE7E9Q.jpg width='300px'></a></td>
+<td>28.10.2019</td>
+<td>Chucky die Mörderpuppe</td>
+<td>Komischer Name... Chucky... #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1188350663316660224'><img src=http://pbs.twimg.com/media/EH3engXX0AEmMUp.jpg width='300px'></a></td>
+<td>27.10.2019</td>
+<td>Stormtrooper (Star Wars)</td>
+<td>Super Trooper! Ahahahahaa! Sie verstehen! Haha! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1187972123257495552'><img src=http://pbs.twimg.com/media/EHa8ZXlXYAIsJE6.jpg width='300px'></a></td>
+<td>26.10.2019</td>
+<td>Coraline</td>
+<td>Mir ist so anders. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1187609734926360577'><img src=http://pbs.twimg.com/media/EHUDES2X4AAGgpC.jpg width='300px'></a></td>
+<td>25.10.2019</td>
+<td>pinhead</td>
+<td>Und das tut nicht weh?  #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1187247348616847360'><img src=http://pbs.twimg.com/media/EHUCVdwWsAAbW4Q.jpg width='300px'></a></td>
+<td>24.10.2019</td>
+<td>Mystique (X-Man)</td>
+<td>Ach und sie können jeder Mensch sein den sie wollen? Praktisch! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1186884959660888065'><img src=http://pbs.twimg.com/media/EHPT-fGX4AAK25I.jpg width='300px'></a></td>
+<td>23.10.2019</td>
+<td>Irgendeine Mumie</td>
+<td>Jaja, ist bald Halloween. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1186522572747366401'><img src=http://pbs.twimg.com/media/EHJmRnzX4AAM8TJ.jpg width='300px'></a></td>
+<td>22.10.2019</td>
+<td>Maulwurfn (Puppe von René Marik)</td>
+<td>Ach! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1186160183581593600'><img src=http://pbs.twimg.com/media/EHBTHxbXUAEuDX8.jpg width='300px'></a></td>
+<td>21.10.2019</td>
+<td>Waschbär (Yvraldis)</td>
+<td>Irgendwas ist anders als sonst. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1185797796701409280'><img src=http://pbs.twimg.com/media/EG2V5f-X4AEDG3l.jpg width='300px'></a></td>
+<td>20.10.2019</td>
+<td>EVE (WALL-E)</td>
+<td>Awwww! #kritzelschuh ääähhh #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1185435407837794304'><img src=http://pbs.twimg.com/media/EG2VDVlXkAQ14iH.jpg width='300px'></a></td>
+<td>19.10.2019</td>
+<td>Die drei Siedler (Siedler)</td>
+<td>vielleicht hätte ich etwas mehr Kaffee aufsetzen sollen. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1185073021217734656'><img src=http://pbs.twimg.com/media/EG15lURWsAEmGdx.jpg width='300px'></a></td>
+<td>18.10.2019</td>
+<td>Bubbles (The Power Puff Girls)</td>
+<td>So viel Power! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1184710633096237056'><img src=http://pbs.twimg.com/media/EGyavwaW4AAMF0t.jpg width='300px'></a></td>
+<td>17.10.2019</td>
+<td>Nebulak (Pokemon)</td>
+<td>Oha! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1184348245742346240'><img src=http://pbs.twimg.com/media/EGqcoD2W4AEC6tE.jpg width='300px'></a></td>
+<td>16.10.2019</td>
+<td>Malefiz (Dornröschen)</td>
+<td>Und wo kommt da jetzt das Garn raus? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1183985856958193666'><img src=http://pbs.twimg.com/media/EGqbonhWwAAcKVR.jpg width='300px'></a></td>
+<td>15.10.2019</td>
+<td>Sternentaler</td>
+<td>Und wann werden die jetzt zu Talern? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1183623469705154560'><img src=http://pbs.twimg.com/media/EGnhy3DXkAA7QtH.jpg width='300px'></a></td>
+<td>14.10.2019</td>
+<td>Po (Teletubbies)</td>
+<td>Och nö! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1183261082623889409'><img src=http://pbs.twimg.com/media/EGlHwSzXYAAksQF.jpg width='300px'></a></td>
+<td>13.10.2019</td>
+<td>Kiki und Jiji (Kikis kleiner Lieferservice)</td>
+<td>Und was liefern Sie so aus? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1182898692770021376'><img src=http://pbs.twimg.com/media/EGbMHCxWwAA89tx.jpg width='300px'></a></td>
+<td>12.10.2019</td>
+<td>Excalibur</td>
+<td>Wie?!? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1182536305177235457'><img src=http://pbs.twimg.com/media/EGTdjYnU4AARK7D.jpg width='300px'></a></td>
+<td>11.10.2019</td>
+<td>Dragonball</td>
+<td>Von denen gibt’s noch mehr stimmt? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1182173918859276289'><img src=http://pbs.twimg.com/media/EGTbuQJU4AAnBJp.jpg width='300px'></a></td>
+<td>10.10.2019</td>
+<td>Schleimgeist/Slimer (Ghostbusters)</td>
+<td>Iiiiihh! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1181811530746204160'><img src=http://pbs.twimg.com/media/EGS601DXoAA1abA.jpg width='300px'></a></td>
+<td>09.10.2019</td>
+<td>Septa Unella (Game of Thrones)</td>
+<td>Der gute Kaffee!!!! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1181449141555093505'><img src=http://pbs.twimg.com/media/EF8PoLLXUAAeoIa.jpg width='300px'></a></td>
+<td>08.10.2019</td>
+<td>Mr. Krabs (SpongeBob)</td>
+<td>Ähm... und warum soll ich jetzt für meinen eigenen Kaffee bezahlen? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1181086755337801728'><img src=http://pbs.twimg.com/media/EF0pHNRWsAAlHqQ.jpg width='300px'></a></td>
+<td>07.10.2019</td>
+<td>Son-Goku (Dragonball)</td>
+<td>Son-Wer? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1180724365832253440'><img src=http://pbs.twimg.com/media/EFvF2h5XYAA1nSA.jpg width='300px'></a></td>
+<td>06.10.2019</td>
+<td>Six (Game: Little Nightmares)</td>
+<td>Och, so unheimlich siehst du gar nicht aus. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1180361978482573312'><img src=http://pbs.twimg.com/media/EFqO2eQWsAInc6m.jpg width='300px'></a></td>
+<td>05.10.2019</td>
+<td>Tassilo (Schöne und das Biest)</td>
+<td>Oh. Ist der Kaffee zu stark? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1179999589778284544'><img src=http://pbs.twimg.com/media/EFktrrrX0AAjrYF.jpg width='300px'></a></td>
+<td>04.10.2019</td>
+<td>Schneewittchen</td>
+<td>Ach, und den Apfel hat sie ihnen einfach geschenkt? Wie nett! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1179637203133243392'><img src=http://pbs.twimg.com/media/EFf6J_kXYAAzo76.jpg width='300px'></a></td>
+<td>03.10.2019</td>
+<td>Rémi (Ratatouille)</td>
+<td>Sie wollen WAS in meinen Kaffee tun??? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1179274942820564992'><img src=http://pbs.twimg.com/media/EFVshe6XsAEzK-W.jpg width='300px'></a></td>
+<td>02.10.2019</td>
+<td>Pinocchio</td>
+<td>Ein Tässchen Sägemehl? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1178912426814660608'><img src=http://pbs.twimg.com/media/EFVFQqCX4AAn3S3.jpg width='300px'></a></td>
+<td>01.10.2019</td>
+<td>Urzah (der dunkle Kristall)</td>
+<td>Junger Meister! ❤️ #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1178550039586562048'><img src=http://pbs.twimg.com/media/EFVEWgKXoAE8ofm.jpg width='300px'></a></td>
+<td>30.09.2019</td>
+<td>Sam der Adler (Muppet Show)</td>
+<td>Ähm... Tag auch? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1178187650450124801'><img src=http://pbs.twimg.com/media/EFTZvYQX4AEfZf7.jpg width='300px'></a></td>
+<td>29.09.2019</td>
+<td>Zeichen für Die Stille/Beichtpriester (Dr. Who)</td>
+<td>Oh Kacke! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1177825264241385472'><img src=http://pbs.twimg.com/media/EFK6Js2W4AEED-f.jpg width='300px'></a></td>
+<td>28.09.2019</td>
+<td>Egon Olsen (Olsenbande</td>
+<td>Mächtig gewaltig Egon! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1177462874941382656'><img src=http://pbs.twimg.com/media/EFKrSLyXUAEJ_IQ.jpg width='300px'></a></td>
+<td>27.09.2019</td>
+<td>Absolem (Alice im Wunderland)</td>
+<td>Darf ich auch mal? Gnihihi. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1177100487520399360'><img src=http://pbs.twimg.com/media/EFKqcWcXoAIN-P1.jpg width='300px'></a></td>
+<td>26.09.2019</td>
+<td>Cyberman (Doctor Who)</td>
+<td>Ähhmmmm... bisschen Öl? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1176738100401360899'><img src=http://pbs.twimg.com/media/EFGZYi0WkAEzuD7.jpg width='300px'></a></td>
+<td>25.09.2019</td>
+<td>Froschkönig</td>
+<td>Möchtest du aus meinem Becherchen trinken? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1176375717132529665'><img src=http://pbs.twimg.com/media/EFGZMH6WkAEoXbj.jpg width='300px'></a></td>
+<td>24.09.2019</td>
+<td>Ferkel (Winnie the Puh)</td>
+<td>♥️ #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1176013323311042560'><img src=http://pbs.twimg.com/media/EExSiKSX4AYw6yd.jpg width='300px'></a></td>
+<td>23.09.2019</td>
+<td>(böser) Wolf (Rotkäppchen)</td>
+<td>Warum haben Sie so große Hände? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1175650936678694912'><img src=http://pbs.twimg.com/media/EEukqI6XsAAHCiK.jpg width='300px'></a></td>
+<td>22.09.2019</td>
+<td>Käpt'n Haddock (Tim & Struppi)</td>
+<td>Sie sind also ein Kapitän? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1175288548313858048'><img src=http://pbs.twimg.com/media/EEmjbjlXUAMwOgE.jpg width='300px'></a></td>
+<td>21.09.2019</td>
+<td>Billy the Puppet (Saw)</td>
+<td>Ich möchte aber kein Spiel spielen. Ich möchte nur den Kaffee trinken. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1174926160477728768'><img src=http://pbs.twimg.com/media/EEminc3WwAAVsmK.jpg width='300px'></a></td>
+<td>20.09.2019</td>
+<td>Alice</td>
+<td>Der Kaffee hat gesagt ich soll ihn trinken! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1174563773056598016'><img src=http://pbs.twimg.com/media/EEfALmYXYAEZshf.jpg width='300px'></a></td>
+<td>19.09.2019</td>
+<td>Frankensteins Monster</td>
+<td>Das Kaffee. Kaffee lecker! Kaffee machen wach! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1174201385782370304'><img src=http://pbs.twimg.com/media/EEac50HWkAYcCYf.jpg width='300px'></a></td>
+<td>18.09.2019</td>
+<td>Flipper der Delfin</td>
+<td>Ouuu... ich dachte du wärst so ein Automat. Ach je. Zeit für einen #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1173838996461375488'><img src=http://pbs.twimg.com/media/EEVzwF5XYAA7dgt.jpg width='300px'></a></td>
+<td>17.09.2019</td>
+<td>Ghostface (Scream)</td>
+<td>Ähmmm.... #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1173476609413779456'><img src=http://pbs.twimg.com/media/EELRyenXkAET2nY.jpg width='300px'></a></td>
+<td>16.09.2019</td>
+<td>Miraculix (aus Asterix)</td>
+<td>Ein Kesselchen Kaffee? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1173114222256869376'><img src=http://pbs.twimg.com/media/EELQcy2XkAAZYzD.jpg width='300px'></a></td>
+<td>15.09.2019</td>
+<td>Schrödingers Katze</td>
+<td>Was ist diese Box von diesem Schrödinger? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1172751833359704064'><img src=http://pbs.twimg.com/media/EEDUPxpWsAAiBXX.jpg width='300px'></a></td>
+<td>14.09.2019</td>
+<td>Möwe aus Findet Nemo</td>
+<td>Nun... #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1172389445661810688'><img src=http://pbs.twimg.com/media/EEDREGYX4AEkOvq.jpg width='300px'></a></td>
+<td>13.09.2019</td>
+<td>Ente aus der Sendung mit der Maus</td>
+<td>Nat! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1172027057670447105'><img src=http://pbs.twimg.com/media/ED8ZPNyX4AAzdKh.jpg width='300px'></a></td>
+<td>12.09.2019</td>
+<td>Prinzessin Zelda</td>
+<td>Ich hab auch was grünes an. Darf ich sie jetzt retten? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1171664670605942787'><img src=http://pbs.twimg.com/media/ED2sQP2X4AA50cZ.jpg width='300px'></a></td>
+<td>11.09.2019</td>
+<td>Bibi Blocksberg</td>
+<td>Eene meene Moll, der Kaffee sei wieder voll! Hex hex! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1171302283121836033'><img src=http://pbs.twimg.com/media/EDwz3YtU4AAEfGF.jpg width='300px'></a></td>
+<td>10.09.2019</td>
+<td>Chibi Maruko Chan (Manga-Serie)</td>
+<td>Och! Dich habe ich ja lange nicht gesehen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1170939895306752000'><img src=http://pbs.twimg.com/media/EDnwKIPXkAAV4FT.jpg width='300px'></a></td>
+<td>09.09.2019</td>
+<td>Metroid Larve (Metroid Spiel)</td>
+<td>Wer...? Was...? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1170577506719584256'><img src=http://pbs.twimg.com/media/EDkHWuSW4AEGWLd.jpg width='300px'></a></td>
+<td>08.09.2019</td>
+<td>Myrapla (Pokemon)</td>
+<td>Nawwww! Wie bist du denn da rein gekommen? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1170215118778458112'><img src=http://pbs.twimg.com/media/EDe45RJX4AAJ1G2.jpg width='300px'></a></td>
+<td>07.09.2019</td>
+<td>Wickie (Wickie und die starken Männer)</td>
+<td>Ach sie sind der, der immer eine Idee hat? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1169852732448104448'><img src=http://pbs.twimg.com/media/EDcsf1FWsAEsXAc.jpg width='300px'></a></td>
+<td>06.09.2019</td>
+<td>Ostberliner Ampelmännchen</td>
+<td>Heißt das, ich darf den Kaffee jetzt trinken? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1169490344351682561'><img src=http://pbs.twimg.com/media/EDe3yPlW4AE_2YX.jpg width='300px'></a></td>
+<td>05.09.2019</td>
+<td>EllaMirelle</td>
+<td>Zeigst du mir wie man so einen schönen Schmollmund bekommt? 😚 #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1169127956020547584'><img src=http://pbs.twimg.com/media/EDUEyPzXkAAdxpA.jpg width='300px'></a></td>
+<td>04.09.2019</td>
+<td>Tweety</td>
+<td>Nein ich bin keine Miezekatze. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1168765567555264512'><img src=http://pbs.twimg.com/media/EDPfIsjWwAUbYUw.jpg width='300px'></a></td>
+<td>03.09.2019</td>
+<td>Severus Snape (Alan Rickman: 'Always')</td>
+<td>Faszinierend! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1168403179492372480'><img src=http://pbs.twimg.com/media/EDIzjbSXYAErRis.jpg width='300px'></a></td>
+<td>02.09.2019</td>
+<td>Arielle die Meerjungfrau</td>
+<td>Möchten sie eine Gabel zu ihrem Kaffee? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1168040791802990592'><img src=http://pbs.twimg.com/media/EDHkJt0WwAA_4QM.jpg width='300px'></a></td>
+<td>01.09.2019</td>
+<td>Spock (Star Trek)</td>
+<td>Willkommen auf der Erde! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1167678402398048257'><img src=http://pbs.twimg.com/media/EC_0HUWW4AEx0qa.jpg width='300px'></a></td>
+<td>31.08.2019</td>
+<td>Cthulhu</td>
+<td>Wie sind sie da rein gekommen? Und wie spricht man dieses chtu... chutull.... chtuhull.... aaaah! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1167316015371423744'><img src=http://pbs.twimg.com/media/EC9LfsHXoAA_TZN.jpg width='300px'></a></td>
+<td>30.08.2019</td>
+<td>Klaus Dieter (Löwenzahn)</td>
+<td>Ich mag dich! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1166953626578890753'><img src=http://pbs.twimg.com/media/EC9KD4ZWsAAuWxw.jpg width='300px'></a></td>
+<td>29.08.2019</td>
+<td>Venom</td>
+<td>Ääähm.... #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1166591240088870912'><img src=http://pbs.twimg.com/media/EC9JvuVXUAAa_ZA.jpg width='300px'></a></td>
+<td>28.08.2019</td>
+<td>Max und Moritz (Wilhelm Busch)</td>
+<td>Was habt ihr vor?? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1166228850944225281'><img src=http://pbs.twimg.com/media/EC1UomfWsAAH8_I.jpg width='300px'></a></td>
+<td>27.08.2019</td>
+<td>Strüppiversion von "Die zerrinnende Zeit
+1165866463787462656,https://twitter.com/datGestruepp/status/1165866463787462656,26.08.2019,Und sie drücken also nur Knöpfe? #kritzelkaffee"</td>
+<td>So fühle ich mich immer ohne Kaffee! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1165141688047661059'><img src=http://pbs.twimg.com/media/ECjV_OdX4AInwGv.jpg width='300px'></a></td>
+<td>24.08.2019</td>
+<td>Der Kleine Prinz</td>
+<td>Hübscher Schal. Strüppi hat auch so einen. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1164779299494387712'><img src=http://pbs.twimg.com/media/ECg3ORuWkAIOMTY.jpg width='300px'></a></td>
+<td>23.08.2019</td>
+<td>Leon, der Profi</td>
+<td>Ach, sie mögen lieber Milch?! Oh. Das ist jetzt.... Ähm...  #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1164416912748634112'><img src=http://pbs.twimg.com/media/ECbcbL0WkAYlfJS.jpg width='300px'></a></td>
+<td>22.08.2019</td>
+<td>Benjamin Buxbaum (Darkwing Duck)</td>
+<td>Guten Tag Herr Buchsbaum! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1164054523939184640'><img src=http://pbs.twimg.com/media/ECUrUSaXoAEAyf6.jpg width='300px'></a></td>
+<td>21.08.2019</td>
+<td>Picasso inspirierter Kaffee</td>
+<td>Ich fühle mich heute so abstrakt. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1163692135838654464'><img src=http://pbs.twimg.com/media/ECLZmMVXkAAvQ1b.jpg width='300px'></a></td>
+<td>20.08.2019</td>
+<td>Mona Lisa</td>
+<td>Guten Morgen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1163329748048719872'><img src=http://pbs.twimg.com/media/ECLXQheXoAAt_uD.jpg width='300px'></a></td>
+<td>19.08.2019</td>
+<td>The Mask</td>
+<td>Wie wär‘s mit einem Luftballontier! Gnihihi! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1162967360585654272'><img src=http://pbs.twimg.com/media/ECJaBqQWwAE19_f.jpg width='300px'></a></td>
+<td>18.08.2019</td>
+<td>Prof. Bienlein (Tim und struppi)</td>
+<td>Sie sind Proffessor.... aha... #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1162604974934618118'><img src=http://pbs.twimg.com/media/EB_pSRaXsAAftct.jpg width='300px'></a></td>
+<td>17.08.2019</td>
+<td>Marvin der Marsianer </td>
+<td>Ach, dich hab ich doch schon mal irgendwo gesehen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1162242586591092736'><img src=http://pbs.twimg.com/media/EB_ooA0XkAA6edd.jpg width='300px'></a></td>
+<td>16.08.2019</td>
+<td>Aang (Avatar the last Airbender)</td>
+<td>Äh, wer? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1161880198142451713'><img src=http://pbs.twimg.com/media/EB7OV22XUAAAUSJ.jpg width='300px'></a></td>
+<td>15.08.2019</td>
+<td>Mona der Vampir</td>
+<td>Schon wach? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1161517809374916608'><img src=http://pbs.twimg.com/media/EB3X6XnWwAASJ9x.jpg width='300px'></a></td>
+<td>14.08.2019</td>
+<td>Grasbüschel</td>
+<td>Kaffee Kaffee Kaffee Kaffeeeeeeeeee!! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1161147871204237312'><img src=http://pbs.twimg.com/media/EByJrqPXsAAaY86.jpg width='300px'></a></td>
+<td>13.08.2019</td>
+<td>@studio_vieleck (auf Twitter)</td>
+<td>Hallo! Wie geht‘s dem Baby? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1160793032947404801'><img src=http://pbs.twimg.com/media/EBsAVkrX4AEabcH.jpg width='300px'></a></td>
+<td>12.08.2019</td>
+<td>Buchling (Walter Moers, Das Labyrinth der träumenden Bücher)</td>
+<td>Ich bin ein Murch...! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1159705870617501696'><img src=http://pbs.twimg.com/media/EBdF_sVXkAA_lBD.jpg width='300px'></a></td>
+<td>09.08.2019</td>
+<td>Ghast (Minecraft)</td>
+<td>Aaah ich muss ganz dringend.... ich hab da einen Bogen und... #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1159339900996587521'><img src=http://pbs.twimg.com/media/EBbNfUgXoAAP73w.jpg width='300px'></a></td>
+<td>08.08.2019</td>
+<td>Der Pate</td>
+<td>Ich habe einen Kaffee den sie nicht ablehnen können. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1158996194313625600'><img src=http://pbs.twimg.com/media/EAujL6kWkAEY1qa.jpg width='300px'></a></td>
+<td>07.08.2019</td>
+<td>Stewie Griffin (Family Guy)</td>
+<td>Ähm... ja... hallo? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1158633805613273090'><img src=http://pbs.twimg.com/media/EAui-B-WkAAzGN-.jpg width='300px'></a></td>
+<td>06.08.2019</td>
+<td>Ryuk (bzw seine Hand und Apfel) (Death Note)</td>
+<td>Sie mögen Äpfel? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1158271417621843968'><img src=http://pbs.twimg.com/media/EAuiqGDWwAEBEyo.jpg width='300px'></a></td>
+<td>05.08.2019</td>
+<td>Luxo Junior (Pixar Lampe)</td>
+<td>Ach, die will nur spielen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1157909029538029569'><img src=http://pbs.twimg.com/media/EAuiavmW4AAtODB.jpg width='300px'></a></td>
+<td>04.08.2019</td>
+<td>Eiskaltes Händchen (Addams Family)</td>
+<td>Entschuldigung? Sind sie immer so kalt? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1157546641668227073'><img src=http://pbs.twimg.com/media/EAuiNnGW4AAxQIO.jpg width='300px'></a></td>
+<td>03.08.2019</td>
+<td>Tangela (Pokemon)</td>
+<td>Da ist schon wieder ein Pokémon in meine Kaffee! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1157184253786042368'><img src=http://pbs.twimg.com/media/EAuh-CfWwAA7U2o.jpg width='300px'></a></td>
+<td>02.08.2019</td>
+<td>Florian Mund (Lefloid) und Der Olli</td>
+<td>Ach so! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1156821866113167360'><img src=http://pbs.twimg.com/media/EAuhtyCXYAIhjyl.jpg width='300px'></a></td>
+<td>01.08.2019</td>
+<td>Oblina (Aaahh! Monster)</td>
+<td>Wer? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1156459478201634816'><img src=http://pbs.twimg.com/media/EAuhhwJXkAIDVUp.jpg width='300px'></a></td>
+<td>31.07.2019</td>
+<td>Strüppi und Wassermelone (Hinweis auf Dirty Dacing)</td>
+<td>Ich habe eine Wassermelone getragen! #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1154647541293580288'><img src=http://pbs.twimg.com/media/EACDNWBWkAMSA3q.jpg width='300px'></a></td>
+<td>26.07.2019</td>
+<td>Yvraldis mit Waschbär</td>
+<td>Darf dein Waschbär denn Kaffee? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1154285151070969857'><img src=http://pbs.twimg.com/media/EAAkTpKXYAAwVR-.jpg width='300px'></a></td>
+<td>25.07.2019</td>
+<td>Paulchen Panther</td>
+<td>Dödöm dödm dödöm dödm dödöm dödödödöööööööööö dödödödöm! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1153922763595423745'><img src=http://pbs.twimg.com/media/D__y2LDX4AEJq8r.jpg width='300px'></a></td>
+<td>24.07.2019</td>
+<td>Kodama/Waldgeister/Baumgeister (Prinzessin Mononoke)</td>
+<td>Trinkt ihr überhaupt was? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1153560377248112640'><img src=http://pbs.twimg.com/media/D__whC5WkAEuvOZ.jpg width='300px'></a></td>
+<td>23.07.2019</td>
+<td>Winnie Puuh</td>
+<td>Etwas Honig in den Kaffee? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1153197988325539840'><img src=http://pbs.twimg.com/media/D__ucFPXYAABmOx.jpg width='300px'></a></td>
+<td>22.07.2019</td>
+<td>Monchichi</td>
+<td>Morgähn! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1152878664578719744'><img src=http://pbs.twimg.com/media/D__ZAHlXoAECIlQ.jpg width='300px'></a></td>
+<td>21.07.2019</td>
+<td>Evoli (Pokemon)</td>
+<td>Wo ist mein Pokeball? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1152496002609364993'><img src=http://pbs.twimg.com/media/D_58-eIXYAA0Lyf.jpg width='300px'></a></td>
+<td>20.07.2019</td>
+<td>Linus von Pelt (Peanuts)</td>
+<td>Jeder braucht doch eine Schmusedecke!  Und Kaffee!! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1152131108269625344'><img src=http://pbs.twimg.com/media/D_0xGazWwAAtj9E.jpg width='300px'></a></td>
+<td>19.07.2019</td>
+<td>Urmel aus dem Eis</td>
+<td>Fühlen Sie sich auch manchmal so fremd gesteuert? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1151777266067750912'><img src=http://pbs.twimg.com/media/D_vvSyeXYAEqE3h.jpg width='300px'></a></td>
+<td>18.07.2019</td>
+<td>Snoopy (Peanuts)</td>
+<td>Morgähn! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1151406459978244096'><img src=http://pbs.twimg.com/media/D_qeCryXUAAhCL-.jpg width='300px'></a></td>
+<td>17.07.2019</td>
+<td>Helferlein (Duck Tales)</td>
+<td>Ideen kann man immer brauchen! Und Hilfe auch! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1150976243073986560'><img src=http://pbs.twimg.com/media/D_kWyOHW4AAG9GH.jpg width='300px'></a></td>
+<td>16.07.2019</td>
+<td>Kleiner Blauer Elefant</td>
+<td>Guten Morgähn liebe Frühaufsteher*innen! 👀 #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1150642569300389893'><img src=http://pbs.twimg.com/media/D_fnUHIXkAAHsCL.jpg width='300px'></a></td>
+<td>15.07.2019</td>
+<td>Yoda</td>
+<td>Aufstehen du musst! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1150276214290112512'><img src=http://pbs.twimg.com/media/D_aaHTnXkAACYx_.jpg width='300px'></a></td>
+<td>14.07.2019</td>
+<td>Bob Ross</td>
+<td>Coffee to strong? Ooh it was only a happy little accident! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1149909082956017664'><img src=http://pbs.twimg.com/media/D_VMNaXWkAYHAd0.jpg width='300px'></a></td>
+<td>13.07.2019</td>
+<td>Nosferatu</td>
+<td>Noch oder schon wach? Ist jetzt Tag oder Nacht? #tilt #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1149551224695357441'><img src=http://pbs.twimg.com/media/D_QGvYYUYAAxDTH.jpg width='300px'></a></td>
+<td>12.07.2019</td>
+<td>Jason (freitag der 13.)</td>
+<td>Ähm... heut ist der 12.!#kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1149197233834921984'><img src=http://pbs.twimg.com/media/D_LEyNjX4AE0Esx.jpg width='300px'></a></td>
+<td>11.07.2019</td>
+<td>Elvis</td>
+<td>Rock‘n‘Roll Leute! #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1148844036645695488'><img src=http://pbs.twimg.com/media/D_GDjt-WwAAGX-X.jpg width='300px'></a></td>
+<td>10.07.2019</td>
+<td>Rapunzel</td>
+<td>Das ist ganz schön hoch! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1148451700337971200'><img src=http://pbs.twimg.com/media/D_AeuhVXsAEhRgS.jpg width='300px'></a></td>
+<td>09.07.2019</td>
+<td>Animal (Muppets)</td>
+<td>Wenn ich früh aufstehen muss! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1148114984930611200'><img src=http://pbs.twimg.com/media/D-7sfQ2X4AEeugC.jpg width='300px'></a></td>
+<td>08.07.2019</td>
+<td>Bernard (Maniac Mansion)</td>
+<td>Wer bist du den? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1147737423935352832'><img src=http://pbs.twimg.com/media/D-2VGdDWwAApKmG.jpg width='300px'></a></td>
+<td>07.07.2019</td>
+<td>Glücksbärchi</td>
+<td>Ach ... nun... ja hallo! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1147378547604037632'><img src=http://pbs.twimg.com/media/D-xOsyDWwAAeOWW.jpg width='300px'></a></td>
+<td>06.07.2019</td>
+<td>Krümelmonster</td>
+<td>Hoppla. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1147020043995275265'><img src=http://pbs.twimg.com/media/D-sIpYwXoAAqHGc.jpg width='300px'></a></td>
+<td>05.07.2019</td>
+<td>Inspector Gadget</td>
+<td>Go Go! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1146658698644938752'><img src=http://pbs.twimg.com/media/D-nAAIRXoAAQpn9.jpg width='300px'></a></td>
+<td>04.07.2019</td>
+<td>Pitiplatsch</td>
+<td>Ach du meine Nase! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1146285457447313408'><img src=http://pbs.twimg.com/media/D-hsiw4XkAAhsGw.jpg width='300px'></a></td>
+<td>03.07.2019</td>
+<td>Papa Schlumpf</td>
+<td>Mir ist ganz schlumpfig zumute! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1145921351250784256'><img src=http://pbs.twimg.com/media/D-chY5_WsAErEHJ.jpg width='300px'></a></td>
+<td>02.07.2019</td>
+<td>Olaf (Frozen)</td>
+<td>Frisch heute. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1145550466941620225'><img src=http://pbs.twimg.com/media/D-XQEmiWwAETgWy.jpg width='300px'></a></td>
+<td>01.07.2019</td>
+<td>Karpador (Pokemon)</td>
+<td>Aha... #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1145223260314976256'><img src=http://pbs.twimg.com/media/D-SmezAX4AMTp_T.jpg width='300px'></a></td>
+<td>30.06.2019</td>
+<td>Diddlmaus</td>
+<td>Nun... #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1144831699748044802'><img src=http://pbs.twimg.com/media/D-NCWxHXYAIjKIf.jpg width='300px'></a></td>
+<td>29.06.2019</td>
+<td>Hutmacher (Alice im Wunderland)</td>
+<td>Verrückter Morgen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1144493949324673024'><img src=http://pbs.twimg.com/media/D-IPLZIUcAAc_Cb.jpg width='300px'></a></td>
+<td>28.06.2019</td>
+<td>Holly Golightly (Tiffany)</td>
+<td>Tag die Dame. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1144124653243424768'><img src=http://pbs.twimg.com/media/D-C_TlsX4AA6wpx.jpg width='300px'></a></td>
+<td>27.06.2019</td>
+<td>Tinman (Oz)</td>
+<td>Ach da gibt’s auch nette Leute? Wie toll! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1143754046353883136'><img src=http://pbs.twimg.com/media/D99uPKrXkAMyrFt.jpg width='300px'></a></td>
+<td>26.06.2019</td>
+<td>Spongebob</td>
+<td>Unterwasser geht’s eigentlich. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1143375482479665152'><img src=http://pbs.twimg.com/media/D94V8DUXkAAnssE.jpg width='300px'></a></td>
+<td>25.06.2019</td>
+<td>Nyan Cat</td>
+<td>Guten Morgen liebe Frühaufsteher*innen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1143036102929977346'><img src=http://pbs.twimg.com/media/D9zhRgRXUAAE9h9.jpg width='300px'></a></td>
+<td>24.06.2019</td>
+<td>Hexe des Westens (Oz)</td>
+<td>Wo sind meine roten Schuhe? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1142668290407436288'><img src=http://pbs.twimg.com/media/D9uSwCDXoAYH1BF.jpg width='300px'></a></td>
+<td>23.06.2019</td>
+<td>Herr Müller-Lüdenscheidt (Loriot)</td>
+<td>Menno! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1142317878873645056'><img src=http://pbs.twimg.com/media/D9pUDCRXoAAvcJt.jpg width='300px'></a></td>
+<td>22.06.2019</td>
+<td>Bibo (Muppets)</td>
+<td>Es ist Wochenende! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1141932798657347584'><img src=http://pbs.twimg.com/media/D9j10bcWwAAqjp7.jpg width='300px'></a></td>
+<td>21.06.2019</td>
+<td>Enton (Pokemon)</td>
+<td>Es ist Freitag!!! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1141565141663789056'><img src=http://pbs.twimg.com/media/D9encQrWkAALKGi.jpg width='300px'></a></td>
+<td>20.06.2019</td>
+<td>Sebastian (Arielle)</td>
+<td>Stimmen wir ein Lied an! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1141204286749253633'><img src=http://pbs.twimg.com/media/D9ZfPxJXoAIzb1Y.jpg width='300px'></a></td>
+<td>19.06.2019</td>
+<td>Schneemann</td>
+<td>Verständlich! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1140837150654631936'><img src=http://pbs.twimg.com/media/D9URVUoXYAAqL17.jpg width='300px'></a></td>
+<td>18.06.2019</td>
+<td>David der Klabauter</td>
+<td>Guten Morgähn liebe Frühaufsteher*innen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1140477815835549697'><img src=http://pbs.twimg.com/media/D9PKhTIXsAA681J.jpg width='300px'></a></td>
+<td>17.06.2019</td>
+<td>Cleopatra</td>
+<td>Diese Naaaaase! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1140123111502876673'><img src=http://pbs.twimg.com/media/D9KH6z7XUAAPio8.jpg width='300px'></a></td>
+<td>16.06.2019</td>
+<td>Maestro (es war einmal …)</td>
+<td>Guten Morgen ! Was lernen wir heute? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1139763649814437888'><img src=http://pbs.twimg.com/media/D9FA_S-XkAYeViz.jpg width='300px'></a></td>
+<td>15.06.2019</td>
+<td>Heidi</td>
+<td>Morgähn! Ein Schlücken Milch zum Kaffee? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1139379956650135552'><img src=http://pbs.twimg.com/media/D8_kBqvVAAEz10d.jpg width='300px'></a></td>
+<td>14.06.2019</td>
+<td>Freddy Kruger</td>
+<td>Hattet ihr auch so komische Träume?! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1139049726177886209'><img src=http://pbs.twimg.com/media/D863r0RXkAID2B4.jpg width='300px'></a></td>
+<td>13.06.2019</td>
+<td>Darkwing Duck</td>
+<td>Ich bin der Schrecken der die Nacht durchflattert!!! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1138672186678493187'><img src=http://pbs.twimg.com/media/D81gUHyXsAAgzS7.jpg width='300px'></a></td>
+<td>12.06.2019</td>
+<td>Bender (Futurama)</td>
+<td>Morgen ihr Menschen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1138302532831318016'><img src=http://pbs.twimg.com/media/D8wQHHlXsAAf5R4.jpg width='300px'></a></td>
+<td>11.06.2019</td>
+<td>Plumps (Sandmännchen)</td>
+<td>Guten Morgen liebe Frühaufsteher*innen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1137983871730012160'><img src=http://pbs.twimg.com/media/D8ruS97XoAAaV57.jpg width='300px'></a></td>
+<td>10.06.2019</td>
+<td>Charlie Chaplin</td>
+<td>Guten Morgen ♥️ #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1137633473747984384'><img src=http://pbs.twimg.com/media/D8mvnCwVUAAUOey.jpg width='300px'></a></td>
+<td>09.06.2019</td>
+<td>Goldener Schnatz</td>
+<td>Guten Morgähn! Ich bin heute nicht so schnell! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1137258691093323777'><img src=http://pbs.twimg.com/media/D8hav2BXsAADeVS.jpg width='300px'></a></td>
+<td>08.06.2019</td>
+<td>Margaret Hamilton</td>
+<td>Guten morgen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1136888671775408130'><img src=http://pbs.twimg.com/media/D8cKN7EWkAAEdE2.jpg width='300px'></a></td>
+<td>07.06.2019</td>
+<td>Schatten von Peter Pan</td>
+<td>Du hast doch nen Schatten! Stimmt!  #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1136503324117741569'><img src=http://pbs.twimg.com/media/D8WrvgYW4AIbIEe.jpg width='300px'></a></td>
+<td>06.06.2019</td>
+<td>Miss Piggy (Muppets)</td>
+<td>Guten Morgen! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1136159291273097217'><img src=http://pbs.twimg.com/media/D8Ry2b_WwAMwV5Z.jpg width='300px'></a></td>
+<td>05.06.2019</td>
+<td>Hamtaro</td>
+<td>Guten Morgen! Aaaww bist du knuffig! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1135770639552471046'><img src=http://pbs.twimg.com/media/D8MRX2YWsAIx3hR.jpg width='300px'></a></td>
+<td>04.06.2019</td>
+<td>ET</td>
+<td>Coffee to fly. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1135430444378480640'><img src=http://pbs.twimg.com/media/D8Hb96tWsAchE52.jpg width='300px'></a></td>
+<td>03.06.2019</td>
+<td>Abe (Oddworld)</td>
+<td>Ello!  #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1135084586852134912'><img src=http://pbs.twimg.com/media/D8ChZ-_WsAIrjGy.jpg width='300px'></a></td>
+<td>02.06.2019</td>
+<td>Kermit (Muppets)</td>
+<td>Mein Gesicht beim ersten Kaffee! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1134709602984112128'><img src=http://pbs.twimg.com/media/D79MXchW4AA9IsM.jpg width='300px'></a></td>
+<td>01.06.2019</td>
+<td>Patrick (Spongebob)</td>
+<td>Ja Patrick, das nennt man Kaffee. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1134338362800771072'><img src=http://pbs.twimg.com/media/D736uXQXUAAEdwa.jpg width='300px'></a></td>
+<td>31.05.2019</td>
+<td>Minion</td>
+<td>BANANAAAAA! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1133988707969785856'><img src=http://pbs.twimg.com/media/D7y8teAXsAAZsZw.jpg width='300px'></a></td>
+<td>30.05.2019</td>
+<td>Anna Samara (Ring)</td>
+<td>Ähäm... Käffchen? Hilft vielleicht. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1133623249382850560'><img src=http://pbs.twimg.com/media/D7twVAEXoAA2C5_.jpg width='300px'></a></td>
+<td>29.05.2019</td>
+<td>Calimero</td>
+<td>Guten Morgen! Ja ich bin auch noch nicht ganz wach. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1133262350046433280'><img src=http://pbs.twimg.com/media/D7ooFnoX4AAZK5P.jpg width='300px'></a></td>
+<td>28.05.2019</td>
+<td>Magneto-Strüppi (X-Men)</td>
+<td>Beeindruckend nicht wahr? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1132876845966348289'><img src=http://pbs.twimg.com/media/D7jJeYUW0AI6WQh.jpg width='300px'></a></td>
+<td>27.05.2019</td>
+<td>Mary Poppins</td>
+<td>Weeenn eeiiiin Löffelchen voll Zuckeeeer... #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1132535279359877120'><img src=http://pbs.twimg.com/media/D7eS1GTWkAAhm8I.jpg width='300px'></a></td>
+<td>26.05.2019</td>
+<td>(privater Kritzelkaffee)</td>
+<td>Einen doppelten auf dich. ♥️  #kritzelkaffee #HappyBirthday</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1132170107462066176'><img src=http://pbs.twimg.com/media/D7ZGtVqWwAAMknq.jpg width='300px'></a></td>
+<td>25.05.2019</td>
+<td>Globi</td>
+<td>Guten Morgen. Es tut mir voll leid aber ich verstehe sie nicht. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1131814304989294592'><img src=http://pbs.twimg.com/media/D7UDG56W4AARlPu.jpg width='300px'></a></td>
+<td>24.05.2019</td>
+<td>Relaxo (Pokemon)</td>
+<td>Guten Morgen! Erst mal relaxen. #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1131443748754399232'><img src=http://pbs.twimg.com/media/D7OyFe-W0AArf5G.jpg width='300px'></a></td>
+<td>23.05.2019</td>
+<td>Death Star (Star Wars)</td>
+<td>Ähm... sollte ich mir Sorgen machen? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1131077386840236032'><img src=http://pbs.twimg.com/media/D7Jk4ajWsAImJwi.jpg width='300px'></a></td>
+<td>22.05.2019</td>
+<td>Moorhuhn</td>
+<td>Bawk! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1130695530265415681'><img src=http://pbs.twimg.com/media/D7EJlCGW0AYohKB.jpg width='300px'></a></td>
+<td>21.05.2019</td>
+<td>Homer Simpson</td>
+<td>Guten Morgähn! Heut ein Dougnut... 🤤 #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1130355288769531904'><img src=http://pbs.twimg.com/media/D6_UJAMWsAAKaUh.jpg width='300px'></a></td>
+<td>20.05.2019</td>
+<td>Andi und Timmeh</td>
+<td>Guten Morgen! Hä? Wer seid ihr denn? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1129992372954292224'><img src=http://pbs.twimg.com/media/D66KEggW4AAIzi5.jpg width='300px'></a></td>
+<td>19.05.2019</td>
+<td>Käpitän Blaubär</td>
+<td>Guten Morgen. Als ich neulich in ein Dimensionsloch fiel da... #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1129247324356653057'><img src=http://pbs.twimg.com/media/D6vkcuoXoAADEk9.jpg width='300px'></a></td>
+<td>17.05.2019</td>
+<td>Erinnermich (Harry Potter)</td>
+<td>Guten morgen!  Mein Erinnermich sagt ich hab irgendwas vergessen.... aaaaahhh aber was?! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1128899759278837760'><img src=http://pbs.twimg.com/media/D6qoVy-XsAA6E8K.jpg width='300px'></a></td>
+<td>16.05.2019</td>
+<td>Marsupilami</td>
+<td>Hubba?! Hubba Hubaa!!! #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1128530032626929668'><img src=http://pbs.twimg.com/media/D6lYE06W0AAPcdR.jpg width='300px'></a></td>
+<td>15.05.2019</td>
+<td>Fester (Adams Family)</td>
+<td>Guten Morgen! Dödödödöm *schnipps schnipps* dödödödöm *schnipps schnipps* ...</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1128164284494753792'><img src=http://pbs.twimg.com/media/D6gLbulWsAA0o2x.jpg width='300px'></a></td>
+<td>14.05.2019</td>
+<td>Tinkerbell</td>
+<td>Guten Morgähn! Auf ins Nimmerland! ♥️#kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1127793944861999104'><img src=http://pbs.twimg.com/media/D6a6m4dWsAAWa7B.jpg width='300px'></a></td>
+<td>13.05.2019</td>
+<td>Link (Legends of Zelda)</td>
+<td>Guten Morgen und einen abenteuerlichen Tag! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1127468912575221761'><img src=http://pbs.twimg.com/media/D6WS_RqXoAAAdMn.jpg width='300px'></a></td>
+<td>12.05.2019</td>
+<td>Jack Skellington</td>
+<td>Guten Morgen! ♥️#kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1127093532441882624'><img src=http://pbs.twimg.com/media/D6Q9lcHX4AE8Pca.jpg width='300px'></a></td>
+<td>11.05.2019</td>
+<td>Zini</td>
+<td>Guten Morgen! Na wer schwebt denn da herein?! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1126726658428325891'><img src=http://pbs.twimg.com/media/D6Lv6xtUEAEA0n7.jpg width='300px'></a></td>
+<td>10.05.2019</td>
+<td>Sancho & Pancho</td>
+<td>Guten Morgen! Heute einen Coffee to hüpf!? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1126356729778921472'><img src=http://pbs.twimg.com/media/D6GfeDyW0AA-1Fh.jpg width='300px'></a></td>
+<td>09.05.2019</td>
+<td>Susuwatari (Totoro/Chihiro)</td>
+<td>Guten Morgähn! Hui! Hier ist ja was los.  #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1125984848013873152'><img src=http://pbs.twimg.com/media/D6BNPIMW0AALFmF.jpg width='300px'></a></td>
+<td>08.05.2019</td>
+<td>Albert Einstein</td>
+<td>Guten Morgähn!  Alles Relativ früh heute.  #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1125634380431491072'><img src=http://pbs.twimg.com/media/D58OfDqV4AAu19n.jpg width='300px'></a></td>
+<td>07.05.2019</td>
+<td>Waldorf und Stadler (Muppet Show)</td>
+<td>Guten Morgen die Herren! #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1125289536110698496'><img src=http://pbs.twimg.com/media/D53U2mGXkAA_Wyq.jpg width='300px'></a></td>
+<td>06.05.2019</td>
+<td>Alraune (Harry Potter)</td>
+<td>Guten Morgen. Alraunenzucht ist gar nicht so einfach! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1124919024628969473'><img src=http://pbs.twimg.com/media/D5yD3wxWwAAmwZI.jpg width='300px'></a></td>
+<td>05.05.2019</td>
+<td>Dumbo</td>
+<td>Guten Morgen und guten Flug! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1124573204868149249'><img src=http://pbs.twimg.com/media/D5tJWkOW4AAQIER.jpg width='300px'></a></td>
+<td>04.05.2019</td>
+<td>Garfield</td>
+<td>Guten Morgen! Heut Abend Lasagne!!! #kitzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1124190364078833664'><img src=http://pbs.twimg.com/media/D5ntJ8-XkAA0PkQ.jpg width='300px'></a></td>
+<td>03.05.2019</td>
+<td>Beetlejuice</td>
+<td>Guten Morgen! Naaa ihr Lappen? Soll ich jemanden für euch aus den Haus vertreiben?  #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1123828033914273793'><img src=http://pbs.twimg.com/media/D5ijnoOW4AACFWR.jpg width='300px'></a></td>
+<td>02.05.2019</td>
+<td>Oskar (Sesamstraße)</td>
+<td>Guten Morgen! Schön das du da bist! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1123470911473057803'><img src=http://pbs.twimg.com/media/D5de0WWWwAEDn3T.jpg width='300px'></a></td>
+<td>01.05.2019</td>
+<td>Hal 9000 (Odysee im Weltraum)</td>
+<td>Guten Mo... äm... nun... #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1123094131356635137'><img src=http://pbs.twimg.com/media/D5YIJEgXkAA1OVF.jpg width='300px'></a></td>
+<td>30.04.2019</td>
+<td>Rübe (Sophie im Schloss des Zauberers)</td>
+<td>Guten Morgen! Wo gehen wir denn hin? #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1122744972409749504'><img src=http://pbs.twimg.com/media/D5TKlTvW4AAz0LJ.jpg width='300px'></a></td>
+<td>29.04.2019</td>
+<td>Groot (Guardians of the Galaxy)</td>
+<td>Guten Morgähn!  Ich bin Groooot! ♥️ #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1122371635485523969'><img src=http://pbs.twimg.com/media/D5N3CkqWkAAjPw4.jpg width='300px'></a></td>
+<td>28.04.2019</td>
+<td>Suse in Black (Men in Black)</td>
+<td>Heute gibt es leider keinen #Kritzelkaffee !  Gut das ihr euch eh nicht daran erinnern werdet. 😏 </td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1122020750595100673'><img src=http://pbs.twimg.com/media/D5I35sKWkAA-hQZ.jpg width='300px'></a></td>
+<td>27.04.2019</td>
+<td>Onkel Matt (Fraggles)</td>
+<td>Guten Morgen!  Es gibt fantastische Dinge zu entdecken! #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1121645041062006786'><img src=http://pbs.twimg.com/media/D5DiM1dUwAEihia.jpg width='300px'></a></td>
+<td>26.04.2019</td>
+<td>Sprechender Hut (Harry Potter)</td>
+<td>Welch schöner Morgen! „HUFFELPUFF!!“ ♥️ Welches ist euer Haus? #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1121288747247652864'><img src=http://pbs.twimg.com/media/D4-eI_GWAAEP0Hj.jpg width='300px'></a></td>
+<td>25.04.2019</td>
+<td>Grisu</td>
+<td>Guten Morgen! Na? Wolltest du als Kind auch immer Feuerwehrmann werden? #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1120933630430281728'><img src=http://pbs.twimg.com/media/D45bLHtW4AELL73.jpg width='300px'></a></td>
+<td>24.04.2019</td>
+<td>Yoshi (Super Mario)</td>
+<td>Guten Morgen! Hallo du! Kaffee? #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1120552488967520256'><img src=http://pbs.twimg.com/media/D40AiPfXkAAb7Ts.jpg width='300px'></a></td>
+<td>23.04.2019</td>
+<td>Kirby</td>
+<td>Guten Morgen! Wer bist du denn kleiner Kerl?! #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1120215411415556096'><img src=http://pbs.twimg.com/media/D4vN959X4AExMC8.jpg width='300px'></a></td>
+<td>22.04.2019</td>
+<td>Enderman (Minecraft)</td>
+<td>Guten Morgen! “Schau mir in die Augen kleines!“ Och naja, besser nicht! #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1119855724564238337'><img src=http://pbs.twimg.com/media/D4qG1L-XkAAMD3s.jpg width='300px'></a></td>
+<td>21.04.2019</td>
+<td>Beaker (Muppet Show)</td>
+<td>Guten ähm... Miii? #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1119496757082300416'><img src=http://pbs.twimg.com/media/D4lAWdjXsAAs-e7.jpg width='300px'></a></td>
+<td>20.04.2019</td>
+<td>Miffy</td>
+<td>Guten Morgen! Ist jetz dieses Ostern? #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1119112319835856896'><img src=http://pbs.twimg.com/media/D4fitKrUcAI6cjJ.jpg width='300px'></a></td>
+<td>19.04.2019</td>
+<td>Der kleine Angsthase (Kinderbuch)</td>
+<td>Guten Morgen! Vor mit brauchst du keine Angst zu haben. #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1118734303939256320'><img src=http://pbs.twimg.com/media/D4aK6GbW0AEB46B.jpg width='300px'></a></td>
+<td>18.04.2019</td>
+<td>Märzhase (Alice im Wunderland)</td>
+<td>Guten Morgen! Keine Zeit!! Aufstehen!!! #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1118399685427908608'><img src=http://pbs.twimg.com/media/D4VakhNWwAAbtFT.jpg width='300px'></a></td>
+<td>17.04.2019</td>
+<td>Mondkalb (Harry Potter)</td>
+<td>Guten Morgähn! Ich glaub ich fantasiere immer noch. #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1118018641411432449'><img src=http://pbs.twimg.com/media/D4QAAv-WAAM6DNj.jpg width='300px'></a></td>
+<td>16.04.2019</td>
+<td>Moby Dick</td>
+<td>Guten Morgen... oder schlafe ich noch?! #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1117662344404979712'><img src=http://pbs.twimg.com/media/D4K79nxW0AEnN7m.jpg width='300px'></a></td>
+<td>15.04.2019</td>
+<td>Frau Elster (Sandmann)</td>
+<td>Guten Morgen! Würden Sie bitte aufhören meine Kette so an zu starren? #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1117323745599926273'><img src=http://pbs.twimg.com/media/D4GIAadXsAA5jLc.jpg width='300px'></a></td>
+<td>14.04.2019</td>
+<td>Rosie (Die Jetsons)</td>
+<td>Guten Morgen! Ja ist alles ordentlich hier! #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1116940221822709762'><img src=http://pbs.twimg.com/media/D4ArMXjWAAAwH_K.jpg width='300px'></a></td>
+<td>13.04.2019</td>
+<td>Werbefigur der Post "Fünf ist Trümpf
+1116613899137105921,https://twitter.com/datGestruepp/status/1116613899137105921,12.04.2019,Guten Morgen und ein fetter Gruß aus den 90ern! #Kritzelkaffee"</td>
+<td>Guten mo... HÄ?!  #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1116225086124691456'><img src=http://pbs.twimg.com/media/D32gyS5XkAANX3m.jpg width='300px'></a></td>
+<td>11.04.2019</td>
+<td>Die Wordklammer</td>
+<td>Nein!!! Einfach nein! Heut ist kein guter Morgen! #Kritzelmonster</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1115869206422216705'><img src=http://pbs.twimg.com/media/D3xdHPIXkAE5mU6.jpg width='300px'></a></td>
+<td>10.04.2019</td>
+<td>Tigerente</td>
+<td>Guten Morgen! Habt einen tollen Tag! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1115483732775927808'><img src=http://pbs.twimg.com/media/D3r-huVXoAAw-PO.jpg width='300px'></a></td>
+<td>09.04.2019</td>
+<td>Fred Feuerstein</td>
+<td>Guten Morgähn! Yabadabadooooo!! #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1115160936166436864'><img src=http://pbs.twimg.com/media/D3nY8V0XsAAUj4L.jpg width='300px'></a></td>
+<td>08.04.2019</td>
+<td>Der Grüffelo</td>
+<td>Guten Morgen! Wer... was... sind sie?! #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1114796688961605632'><img src=http://pbs.twimg.com/media/D3iNqd3XkAA5frk.jpg width='300px'></a></td>
+<td>07.04.2019</td>
+<td>Raffaels Engel (auch die Engel der Sixtina)</td>
+<td>Guten Morgen! Mir ist so klassisch! #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1114403570588225539'><img src=http://pbs.twimg.com/media/D3coIIZWwAAyuDW.jpg width='300px'></a></td>
+<td>06.04.2019</td>
+<td>Pikachu (Pokemon)</td>
+<td>Guten Morgen! Eine Ladung Energie gefällig? #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1114054016642711553'><img src=http://pbs.twimg.com/media/D3XqNKiW0AExVps.jpg width='300px'></a></td>
+<td>05.04.2019</td>
+<td>Löwenzahn</td>
+<td>Guten Morgen! Mir ist heute etwas melancholisch. #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1113688263930318853'><img src=http://pbs.twimg.com/media/D3SdjoBWAAIxUIV.jpg width='300px'></a></td>
+<td>04.04.2019</td>
+<td>Jeannie (Bezaubernde Jeannie)</td>
+<td>Guten Morgen! Uiii ich wünsche mir...!? #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1113315671054614528'><img src=http://pbs.twimg.com/media/D3NKr4GW0AA38Yi.jpg width='300px'></a></td>
+<td>03.04.2019</td>
+<td>Alf</td>
+<td>Bringt die Katzen in Sicherheit und habt einen tollen Tag! #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1112939621854441472'><img src=http://pbs.twimg.com/media/D3H0rHIXcAAFsbo.jpg width='300px'></a></td>
+<td>02.04.2019</td>
+<td>Otto Waalkes</td>
+<td>Guten Morgen! Heute gibt’s Geschichten vom Deich. #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1112582596310040577'><img src=http://pbs.twimg.com/media/D3Cv9dJWsAEj6b4.jpg width='300px'></a></td>
+<td>01.04.2019</td>
+<td>Barry und Sting (Flossen; Ruthe)</td>
+<td>Guten Morgen! Zeit für Kaffeee! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1112269209512407040'><img src=http://pbs.twimg.com/media/D2-S8GQX4AERH_-.jpg width='300px'></a></td>
+<td>31.03.2019</td>
+<td>Mainzelmännchen</td>
+<td>Guten Morgähn! Na? Ausgeschlafen? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1111883840933502976'><img src=http://pbs.twimg.com/media/D240cevX4AAMEMh.jpg width='300px'></a></td>
+<td>30.03.2019</td>
+<td>Pippilotta Viktualia Rollgardina Pfefferminz Efraimstochter Langstrumpf</td>
+<td>Guten Morgen ! Heut mach ich mir die Welt Widewidewie sie mir gefällt! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1111518795510833152'><img src=http://pbs.twimg.com/media/D2zob8hX4AA1bgp.jpg width='300px'></a></td>
+<td>29.03.2019</td>
+<td>Keith Haring inspiriert</td>
+<td>Guten Morgähn! Heute ziehe ich eine klare Linie! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1111157938763096064'><img src=http://pbs.twimg.com/media/D2ugPU9WwAAdeUo.jpg width='300px'></a></td>
+<td>28.03.2019</td>
+<td>Der kleine Maulwurf</td>
+<td>Guten Morgen! Guck mal die Sonne scheint... #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1110790522388520960'><img src=http://pbs.twimg.com/media/D2pSEs8XcAA4luH.jpg width='300px'></a></td>
+<td>27.03.2019</td>
+<td>Suse mit dem Perlohrring</td>
+<td>Guten Morgen! Käffchen für den ...(bedeutungsvolle Pause) .... Künstler? #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1110414170653118464'><img src=http://pbs.twimg.com/media/D2j7yVfXgAAVSOD.jpg width='300px'></a></td>
+<td>26.03.2019</td>
+<td>Grobi (Muppet Show)</td>
+<td>Guten Morgen liebe Frühaufsteher*innen! Heute erklären wir euch den Unterschied zwischen wach und sehr sehr müde! #kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1110071275592925184'><img src=http://pbs.twimg.com/media/D2fD7NLX0AAf3U2.jpg width='300px'></a></td>
+<td>25.03.2019</td>
+<td>Fuchur der Glücksdrache (die Unendliche Geschichte)</td>
+<td>Guten Morgen! Nimmst du mich mit? #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1109701199551438848'><img src=http://pbs.twimg.com/media/D2ZzVu1XQAEGJbv.jpg width='300px'></a></td>
+<td>24.03.2019</td>
+<td>Der Schrei</td>
+<td>Guten MoräaaAAAAAAAHH! #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1109341284890804224'><img src=http://pbs.twimg.com/media/D2UsAEhXQAAaNLF.jpg width='300px'></a></td>
+<td>23.04.2019</td>
+<td>Grinsekatze (Alice im Wunderland) </td>
+<td>Guten Morgen! Ähm... nettes Lächeln?!....</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1108989901339574272'><img src=http://pbs.twimg.com/media/D2PsbCfWwAAmW5y.jpg width='300px'></a></td>
+<td>22.03.2019</td>
+<td>Michael "Mike" Glotzkovski (Monster AG)</td>
+<td>Guten Morgen.  Bitte hören sie auf mich an zu glotzen.  #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1108618393412878337'><img src=http://pbs.twimg.com/media/D2KaiesWkAABpPj.jpg width='300px'></a></td>
+<td>21.03.2019</td>
+<td>Mushu (Mulan) </td>
+<td>Guten Morgen! Hihi. Dich mag ich!</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1108277996287332352'><img src=http://pbs.twimg.com/media/D2Fk8m2XcAE94Js.jpg width='300px'></a></td>
+<td>20.03.2019</td>
+<td>Calcifer (Das wandelnde Schloss)</td>
+<td>Guten Morgähn! Das wird ein sehr heißer Kaffee heute! #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1107901183207882754'><img src=http://pbs.twimg.com/media/D2AOPFSWwAABPN6.jpg width='300px'></a></td>
+<td>19.03.2019</td>
+<td>Jan Müller-Michaelis (Leitender Entwickler bei Deponia, Edna bricht aus, A New Beginning, ...)</td>
+<td>Guten mo... äh... Droggelbecher!! #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1107541433207218176'><img src=http://pbs.twimg.com/media/D17HDANX0AAqd_x.jpg width='300px'></a></td>
+<td>18.03.2019</td>
+<td>Gandalf</td>
+<td>Guten Morgen! Gibt’s jetzt ein Feuerwerk?  #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1107181555259269120'><img src=http://pbs.twimg.com/media/D11_vaHWoAEOhph.jpg width='300px'></a></td>
+<td>17.03.2019</td>
+<td>Poldi (Hallo Spencer)</td>
+<td>Guten Morgen! Mit lieben Grüßen aus der Kindheit! ❤️ #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1106827495448420352'><img src=http://pbs.twimg.com/media/D1w9uRVX0AE2zdc.jpg width='300px'></a></td>
+<td>16.03.2019</td>
+<td>Hein Blöd (Kapitän Blaubär)</td>
+<td>Guten Morgen! Sind wir nicht alle ein bisschen Hein? #Kritzelkaffee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1106437885371273216'><img src=http://pbs.twimg.com/media/D1rbXkPXgAEgePL.jpg width='300px'></a></td>
+<td>15.03.2019</td>
+<td>Totoro (Giblih Film)</td>
+<td>Guten Morgen!! Vergesst den Schirm nicht! Und legt euch was um den Hals, es ist immer noch kalt! #Kritzelkaffee #fürmichnurTee</td>
+</tr>
+<tr>
+<td><a href='https://twitter.com/datGestruepp/status/1106092374227406848'><img src=http://pbs.twimg.com/media/D1mhIkeWsAATG0X.jpg width='300px'></a></td>
+<td>14.03.2019</td>
+<td>Hulk</td>
+<td>Guten Morgähn! Ja ich brauche heute einfach wen der mich durch die Gegend trägt. #Kritzelkaffee</td>
+</tr>
+
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+</body>
+</html>

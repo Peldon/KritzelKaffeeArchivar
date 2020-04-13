@@ -42,16 +42,18 @@ htmlstart = """
 </head>
 <body>
 
-<h2>My Customers</h2>
+<h2>KritzelKaffees</h2>
 
 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
 
 <table id="myTable">
+  <col width="30">
+  <col width="80">
   <tr class="header">
-    <th style="width:20%;">Datum</th>
-    <th style="width:20%;">Gast</th>
-    <th style="width:40%;">Text</th>
-    <th style="width:20%;">Bild</th>
+    <th>Bild</th>
+    <th>Datum</th>
+    <th>Gast</th>
+    <th>Text</th>
   </tr>
 """
 htmlend = """
@@ -65,7 +67,7 @@ function myFunction() {
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
+    td = tr[i].getElementsByTagName("td")[1];
     if (td) {
       txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {

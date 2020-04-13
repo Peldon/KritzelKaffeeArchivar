@@ -9,15 +9,19 @@ class KritzelKaffeeTweet:
 
 
 def convert_to_KritzelKaffeeTweet(line):
-    return KritzelKaffeeTweet(line[0], line[1], line[2], line[3], line[4])
+    return KritzelKaffeeTweet(line[0], line[2], line[4], line[3], line[6])
 
 def read_csv():
     import csv
     filename = "KritzelKaffeesWithNames.csv" 
     kritzelkaffees = []
-    with open(filename, 'rb', encoding="utf-8") as csvfile:
+    with open(filename, 'r', encoding="utf-8") as csvfile:
         reader = csv.reader(csvfile, delimiter=',', quotechar='"')
+        rownr = 0
         for row in reader:
+            rownr += 1
+            if (rownr == 1): #ignore header
+                continue
             kritzelkaffees.append(convert_to_KritzelKaffeeTweet(row))
     return kritzelkaffees
 
@@ -28,10 +32,10 @@ def save_html(kritzelkaffees):
         htmlfile.write(htmlstart)
         for k in kritzelkaffees:
             htmlfile.write("<tr>\n")
+            htmlfile.write("<td><a href='https://twitter.com/datGestruepp/status/" + k.id + "'><img src=" + k.imglink + " width='300px'></a></td>\n")
             htmlfile.write("<td>"+k.date+"</td>\n")
             htmlfile.write("<td>"+k.name+"</td>\n")
             htmlfile.write("<td>"+k.text+"</td>\n")
-            htmlfile.write("<td><img src='"+k.imglink+"' width='200px'></td>\n")
             htmlfile.write("</tr>\n")
         htmlfile.write(htmlend)
     return filename
