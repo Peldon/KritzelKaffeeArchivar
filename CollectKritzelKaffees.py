@@ -17,14 +17,16 @@ def is_KritzelKaffeeTweet(tweet):
     hasHashtag = len(list(filter(lambda y: "kritzelkaffee" == y['text'].lower(), tweet['entities']['hashtags']))) > 0
     return hasHashtagInText or hasHashtag
 
-def get_tweets():
-    tweets = t.statuses.user_timeline(screen_name="datGestruepp", exclude_replies=True, count=200)
+def get_tweets(since_id):
+    tweets = t.statuses.user_timeline(screen_name="datGestruepp", exclude_replies=True, count=200, since_id=since_id)
     earliest_tweet = min(tweets, key=lambda x: x["id"])["id"] - 1
     result = list(filter(is_KritzelKaffeeTweet, tweets))
     while True:
+        if since_id > earliest_tweet:
+            break
         print("Found "+str(len(result)) + " tweets so far")
         print("Looking for tweets with max_id="+str(earliest_tweet))
-        tweets_nextpage = t.statuses.user_timeline(screen_name="datGestruepp", max_id=earliest_tweet, exclude_replies=True, count=200)
+        tweets_nextpage = t.statuses.user_timeline(screen_name="datGestruepp", max_id=earliest_tweet, exclude_replies=True, count=200, since_id=since_id)
         if not tweets_nextpage:
             print("no more tweets found")
             break
@@ -65,9 +67,9 @@ def save_csv_clean(kritzelkaffees):
 def save_csv_for_googlesheet(kritzelkaffees):
     filename = "KritzelKaffeesGoogleSheet.csv" 
     with open(filename, 'w', encoding="utf-8") as csvfile:
-        csvfile.write("TwitterLink,Datum,TweetText,Bild,Gast\n")
+        csvfile.write("TwitterID,TwitterLink,Datum,TweetText,BildLink,Bild,Gast\n")
         for k in kritzelkaffees:
-            csvfile.write("https://twitter.com/datGestruepp/status/"+str(k.id) +","+ k.date +",\""+ k.text.replace('\n',' ').replace('"', "'") +"\",=image(\""+ k.imglink +"\"),\""+ k.guestname +"\"\n")
+            csvfile.write(str(k.id) +",https://twitter.com/datGestruepp/status/"+ str(k.id) +","+ k.date +",\""+ k.text.replace('\n',' ').replace('"', "'") +"\","+k.imglink+",=image(\""+ k.imglink +"\"),\""+ k.guestname +"\"\n")
     return filename
 
 if __name__ == "__main__":
@@ -75,8 +77,10 @@ if __name__ == "__main__":
     t = Twitter(auth=OAuth(token, token_secret, consumer_key, consumer_secret))
     print('Looking for KritzelKaffee tweets')
     #tweets = get_old_tweets()
-    tweets = get_tweets()
+    tweetsNewerThanId = 1251389999481794560 # 18.04.2020
+    tweets = get_tweets(tweetsNewerThanId)
     kritzelkaffees = convert_to_KritzelKaffeeTweet(tweets)
+    kritzelkaffees.sort(key=lambda k: k.id)
     print('Found ' + str(len(kritzelkaffees)) + ' KritzelKaffee tweets!')
     
     # TODO read guest names and add them to the kritzelkaffees
