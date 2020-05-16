@@ -77,7 +77,6 @@ Dabei kritzelt das Gestruepp immer G&auml;ste, die nie zuvor ein Mensch beim Kri
 Alle Bilder entstammen datGestruepps Feder und sind nicht ohne Nachfrage zu verwenden.</br>
 Twitter: <a href="https://twitter.com/datGestruepp">https://twitter.com/datGestruepp</a></br>
 Instagram: <a href="https://www.instagram.com/datgestruepp">https://www.instagram.com/datgestruepp/</a></br>
-Homepage: <a href="http://susanne-stiller.de">http://susanne-stiller.de</a></br>
 </p>
 </div>
 <input type="text" id="myInput" onkeyup="filterKaffee()" placeholder="Suche nach einem Gast..." title="Namen hier eingeben">
