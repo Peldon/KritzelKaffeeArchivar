@@ -48,7 +48,7 @@ if __name__ == "__main__":
     print('Looking for KritzelKaffee csv file')
     kritzelkaffees = read_csv()
     print('Found ' + str(len(kritzelkaffees)) + ' KritzelKaffee entries!')
-    kritzelkaffees.sort(key=lambda k: k.id)
+    kritzelkaffees.sort(key=lambda k: k.id, reverse=True)
     htmlfilename = save_html(kritzelkaffees)
     print('Wrote data to ' + htmlfilename)
     print('Bye')
