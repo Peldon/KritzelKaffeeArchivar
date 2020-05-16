@@ -9,7 +9,7 @@ class KritzelKaffeeTweet:
 
 
 def convert_to_KritzelKaffeeTweet(line):
-    return KritzelKaffeeTweet(line[0], line[2], line[4], line[3], line[6])
+    return KritzelKaffeeTweet(line[0], line[2], line[4], line[3], line[5])
 
 def read_csv():
     import csv
@@ -31,12 +31,15 @@ def save_html(kritzelkaffees):
         from HtmlTemplate import htmlstart, htmlend
         htmlfile.write(htmlstart)
         for k in kritzelkaffees:
-            htmlfile.write("<tr>\n")
-            htmlfile.write("<td><a href='https://twitter.com/datGestruepp/status/" + k.id + "'><img src=" + k.imglink + " width='300px'></a></td>\n")
-            htmlfile.write("<td>"+k.date+"</td>\n")
-            htmlfile.write("<td>"+k.name+"</td>\n")
-            htmlfile.write("<td>"+k.text+"</td>\n")
-            htmlfile.write("</tr>\n")
+            htmlfile.write("<div class=\"kritzelkaffee-div\">\n")
+            htmlfile.write("<table class=\"kritzelkaffee-table\">\n")
+            htmlfile.write("<tr><td class=\"kritzelkaffee-table-date\"><a href='https://twitter.com/datGestruepp/status/" + k.id + "'>Tweet vom "+k.date+"</a></td></tr>\n")
+            htmlfile.write("<tr><td class=\"kritzelkaffee-table-name\">"+k.name+"</td></tr>\n")
+            htmlfile.write("<tr><td class=\"kritzelkaffee-table-img\"><img src='"+k.imglink+"'></td></tr>\n")
+            htmlfile.write("<tr><td class=\"kritzelkaffee-table-text\">"+k.text+"</td></tr>\n")
+            htmlfile.write("</table>\n")
+            htmlfile.write("</div>\n")
+
         htmlfile.write(htmlend)
     return filename
 
