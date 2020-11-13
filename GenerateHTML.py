@@ -35,7 +35,7 @@ def save_html(kritzelkaffees):
             htmlfile.write("<table class=\"kritzelkaffee-table\">\n")
             htmlfile.write("<tr><td class=\"kritzelkaffee-table-date\"><a href='https://twitter.com/datGestruepp/status/" + k.id + "'>Tweet vom "+k.date+"</a></td></tr>\n")
             htmlfile.write("<tr><td class=\"kritzelkaffee-table-name\">"+k.name+"</td></tr>\n")
-            htmlfile.write("<tr><td class=\"kritzelkaffee-table-img\"><img src='"+k.imglink+"'></td></tr>\n")
+            htmlfile.write("<tr><td class=\"kritzelkaffee-table-img\"><img src=\"placeholder.svg\" data-src='"+k.imglink+"'></td></tr>\n")
             htmlfile.write("<tr><td class=\"kritzelkaffee-table-text\">"+k.text+"</td></tr>\n")
             htmlfile.write("</table>\n")
             htmlfile.write("</div>\n")

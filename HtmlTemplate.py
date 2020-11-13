@@ -87,7 +87,7 @@ Instagram: <a href="https://www.instagram.com/datgestruepp">https://www.instagra
 #htmlfile.write("<table class=\"kritzelkaffee-table\">\n")
 #htmlfile.write("<tr><td class=\"kritzelkaffee-table-date\"><a href='https://twitter.com/datGestruepp/status/" + k.id + "'>Tweet vom "+k.date+"</a></td></tr>\n")
 #htmlfile.write("<tr><td class=\"kritzelkaffee-table-name\">"+k.name+"</td></tr>\n")
-#htmlfile.write("<tr><td class=\"kritzelkaffee-table-img\"><img src='"+k.imglink+"'></td></tr>\n")
+#htmlfile.write("<tr><td class=\"kritzelkaffee-table-img\"><img src=\"placeholder.svg\" data-src='"+k.imglink+"'></td></tr>\n")
 #htmlfile.write("<tr><td class=\"kritzelkaffee-table-text\">"+k.text+"</td></tr>\n")
 #htmlfile.write("</table>\n")
 #htmlfile.write("</div>\n")
@@ -95,6 +95,62 @@ htmlend = """
 </div>
 
 <script>
+/**
+* Tests if the element is visible (within the visible part of the page)
+* It's enough that the top or bottom edge of the element are visible
+*/
+function isVisible(elem) {
+
+    let coords = elem.getBoundingClientRect();
+
+    let windowHeight = document.documentElement.clientHeight;
+
+    // top elem edge is visible OR bottom elem edge is visible
+    let topVisible = coords.top > 0 && coords.top < windowHeight;
+    let bottomVisible = coords.bottom < windowHeight && coords.bottom > 0;
+
+    return topVisible || bottomVisible;
+}
+
+/**
+A variant of the test that considers the element visible if it's no more than
+one page after/behind the current screen.
+
+function isVisible(elem) {
+
+    let coords = elem.getBoundingClientRect();
+
+    let windowHeight = document.documentElement.clientHeight;
+
+    let extendedTop = -windowHeight;
+    let extendedBottom = 2 * windowHeight;
+
+    // top visible || bottom visible
+    let topVisible = coords.top > extendedTop && coords.top < extendedBottom;
+    let bottomVisible = coords.bottom < extendedBottom && coords.bottom > extendedTop;
+
+    return topVisible || bottomVisible;
+}
+*/
+
+function showVisible() {
+    let i = 0;
+    for (let img of document.querySelectorAll('img')) {
+        let realSrc = img.dataset.src;
+        if (!realSrc) continue;
+
+        if (isVisible(img)) {
+            // disable caching
+
+            img.src = realSrc;
+
+            img.dataset.src = '';
+        }
+        i++;
+    }
+    console.log("showVisible "+i);
+}
+
 function filterKaffee() {
   var input, filter, table, div, name, i, txtValue;
   input = document.getElementById("myInput");
@@ -110,9 +166,13 @@ function filterKaffee() {
       } else {
         div[i].style.display = "none";
       }
-    }       
+    }
   }
+  showVisible();
 }
+
+window.addEventListener('scroll', showVisible);
+showVisible();
 </script>
 
 </body>
