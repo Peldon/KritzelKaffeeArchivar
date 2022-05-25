@@ -1,0 +1,36 @@
+
+1. Abrufen von Twitter per Script CollectKritzelKaffee.py
+
+
+2. csv Datei in google sheet importieren
+https://docs.google.com/spreadsheets/d/1j79Z544nEV1Pp4oEnn7RwRhnKIDQcGBoGRatJFPqBVs/edit#gid=281392001
+
+a. add sheet
+b. import csv
+...
+
+3. Namen vervollständigen mit Hilfe der Community
+
+4. von google sheet zu csv
+
+a. Als openoffice Datei abspeichern
+    File -> Download -> OpenDocument (.ods)
+    speichern als KritzelKaffeeListe.ods
+b. In OpenOffice öffnen und bearbeiten
+    alles löschen, was nicht exportiert werden soll
+    dazu zählt auch die Spalte mit dem Bild ("=image...") !!
+c. Speichern als KritzelKaffeeListe.csv
+    Save As... (siehe Bild HowToExportFromOpenOffice1.png)
+    Edit filter settings (siehe Bild HowToExportFromOpenOffice2.png)
+d. Inhalt von KritzelKaffeeListe.csv kopieren 
+    und in KritzelKaffeesWithNames.csv hinten einfügen
+
+
+5. mit script GenerateHTML.py html-seite erstellen
+PS D:\Projects\github\KritzelKaffeeArchivar> .\GenerateHTML.py
+Looking for KritzelKaffee csv file
+Found 739 KritzelKaffee entries!
+Wrote data to KritzelKaffees.html
+Bye
+
+6. upload html-seite zu github
