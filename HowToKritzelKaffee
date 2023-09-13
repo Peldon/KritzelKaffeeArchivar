@@ -1,4 +1,15 @@
 
+pip install twitter
+pip install python-dateutil
+
+create a file TwitterTokens.py to define
+token = ""
+token_secret = ""
+consumer_key = ""
+consumer_secret = ""
+
+twitter is now X and everything costs money... step one of this doesnt work anymore. fuck elon
+
 1. Abrufen von Twitter per Script CollectKritzelKaffee.py
 
 

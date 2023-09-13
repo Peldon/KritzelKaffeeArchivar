@@ -78,7 +78,7 @@ if __name__ == "__main__":
     t = Twitter(auth=OAuth(token, token_secret, consumer_key, consumer_secret))
     print('Looking for KritzelKaffee tweets')
     #tweets = get_old_tweets()
-    tweetsNewerThanId = 1326781774886805505 # 12.11.2020
+    tweetsNewerThanId = 1563405957492776960 # 27.08.2022
     tweets = get_tweets(tweetsNewerThanId)
     kritzelkaffees = convert_to_KritzelKaffeeTweet(tweets)
     kritzelkaffees.sort(key=lambda k: k.id)
